@@ -1,0 +1,605 @@
+ja:
+  translation:
+    common:
+      menu:
+        data_palette: データパレット
+      button:
+        add: 追加
+        add_new: 新規追加
+        apply: 適用
+        cancel: キャンセル
+        check: 確認
+        close: 閉じる
+        create_new: 新規作成
+        download: ダウンロード
+        back: 戻る
+        copy: 複製
+        edit: 編集
+        end: 終了
+        delete: 削除
+        details: 詳細
+        file_detail: ファイルの詳細を表示する
+        finish: 終了
+        force_stop: 強制停止
+        list_donwloads: ダウンロード一覧を表示する
+        list_uploads: アップロード一覧を表示する
+        import: 取込
+        new: 新規作成
+        next: 次へ
+        ok: 完了
+        pause: 一時停止
+        reset: リセット
+        save: 保存
+        setup: 設定
+        send: 送信
+        link: リンク
+        image: 画像
+        emotion: 絵文字
+        fixed_text: 定型文
+        cell: セル挿入
+        data: データ
+        recommend: レコメンド
+        skip: スキップ
+        output: 出力
+        set: 設定
+        operation_history: 稼働履歴
+        archive: アーカイブ
+        select: 選択
+        copy_clipboard: コピー
+        execute: 実行
+        confirm: 確認
+        modify: 変更
+        unarchive: アーカイブ解除
+        complete: 完了
+        reload: 更新
+        register: 登録
+        support: サポート
+        enable: 有効
+        disable: 無効
+        insert: 挿入
+        select_all: 全選択
+        release_all: 全解除
+        approval: 承認
+        approval_request: 承認依頼
+        setting:
+          auth: 権限設定
+          notification: 通知設定
+          sample_data: サンプルデータ設定
+        history: 更新履歴
+        usage_situation: 利用状況
+        explanatory_note: 説明文
+        note: メモ
+        test_send: テスト送信
+      url:
+        default: URL
+        link: リンク
+        short: 短縮URL
+        unsubscribe: 配信停止URL
+      time:
+        am: 午前
+        formats:
+          default: "%{- date, %Y/%m/%d %H:%M:%S}"
+          long: "%{- date, %Y年%m月%d日(%a) %H時%M分%S秒 %z}"
+          short: "%{- date, %Y/%m/%d %H:%M}"
+          date: "%{- date, %m/%d}"
+          time: "%{- date, %H:%M}"
+          datetime: "%{- date, %m/%d %H:%M}"
+          created_at: "%{- date, %Y/%m/%d}"
+          full_date: "%{- date, %Y/%m/%d (%a)}"
+        pm: 午後
+        day: 日
+        weekly:
+          monday: 月
+          tuesday: 火
+          wednesday: 水
+          thursday: 木
+          friday: 金
+          saturday: 土
+          sunday: 日
+          '1': 月
+          '2': 火
+          '3': 水
+          '4': 木
+          '5': 金
+          '6': 土
+          '0': 日
+      tooltip:
+        add:
+          folder: フォルダー追加
+        align:
+          default: 行揃え
+        change:
+          default: 変更
+          interval: 間隔変更
+        check:
+          site: サイトを確認
+        color:
+          default: 色
+          text: 文字色
+          fill: 塗りつぶしの色
+        copy:
+          default: 複製
+          url:
+            default: リンクコピー
+            success: URLをコピーしました
+        created_by:
+          default: 作成者
+        delete:
+          default: 削除
+        download:
+          default: ダウンロード
+        edit:
+          default: 編集
+        element:
+          default: 要素
+          image: 画像
+          text: テキスト
+          link: リンク
+        format:
+          default: フォーマット
+          bold: 太字
+          italic: 斜体
+          underline: 下線
+          strikethrough: 取り消し線
+        help:
+          default: ヘルプ
+        insert:
+          default: 挿入
+          date: 日付挿入
+          data: データ挿入
+          recommend: レコメンド挿入
+          signature: 署名挿入
+          if_statement: IF文挿入
+          html_css_file: HTML/CSSファイルの挿入
+        name:
+          default: 名前
+        preview:
+          default: プレビュー
+        redo:
+          default: やり直す
+        sample_data:
+          default: サンプルデータ
+          setting: サンプルデータ設定
+        setting:
+          default: 設定
+          content: 設定内容
+          auth: 権限設定
+          notification: 通知設定
+          aggregation_frequency: 集計頻度設定
+        sort:
+          default: ソート
+        toggle:
+          grid_list: 表示切替
+          graph_view: グラフ切替
+        tutorial:
+          default: チュートリアル
+        undo:
+          default: 元に戻す
+        updated_at:
+          default: 更新日時
+          last: 最終更新日時
+        upload:
+          default: アップロード
+        usage_stats:
+          default: 利用状況
+        version:
+          default: バージョン
+          check: このバージョンを確認
+        history:
+          default: 更新履歴
+          exec: 実行履歴
+        display:
+          width_change: 列幅変更
+        export:
+          default: データ出力
+        approval:
+          default: 承認
+          request: 承認依頼
+        save:
+          default: 保存
+        see_detail:
+          default: 詳しく見る
+        capture:
+          setting: 取込設定
+        title:
+          default: 件名
+        viewers:
+          default: 閲覧人数
+      cooperation_options:
+        all: 全てのステータス
+        after: 連携前
+        complete: 連携完了
+        failure: 連携失敗
+        importing: 取込中
+        import_complete: 取込完了
+        error_skip_complete: エラースキップして取込完了
+        capture_failure: 取込失敗
+      sort_by:
+        name_asc: 名称A→Z(△昇順)
+        name_desc: 名称Z→A(▼降順)
+        created_at_asc: 作成日(△昇順)
+        created_at_desc: 作成日(▼降順)
+        updated_at_asc: 更新順(△昇順)
+        updated_at_desc: 更新順(▼降順)
+        last_updated_at_asc: 最終更新日(△昇順)
+        last_updated_at_desc: 最終更新日(▼降順)
+      placeholder:
+        custom: '%{subject}を入力'
+        subject:
+          aggregation_period: 集計期間
+          keyword: キーワード
+          item_name: 項目名
+        content_name: コンテンツ名を入力
+        recommend_name: レコメンド名を入力
+        enter_url: 確認したいURLを入力しましょう
+        item_name: カラム名を入力
+        memo: メモを入力
+        page: ページを入力
+        full_name: 氏名を入力
+        user_name: ユーザー名を入力
+        group_name: グループ名を入力
+        mail_address: メールアドレスを入力
+        department: 部署を入力
+        position: 役職を入力
+        select: 選択してください
+        enter_number: 数値を入力
+        name: 名称を入力
+        search: 検索する
+        text: テキストを入力
+        auth:
+          select: 権限を選択
+        notification:
+          select: 通知を選択
+      unit:
+        people: 人
+        number: 件
+        yen: 円
+        times: 回
+    toast:
+      in_progress: "ダウンロード中..."
+      complete: "ダウンロードが完了しました"
+    select_cell:
+      hakase: 挿入するセルを選択しましょう<br>※画面に表示されていない時は<br>　絞り込みを使って探しましょう
+    report:
+      delivery:
+        title: 配信数
+        detail:
+          title: 配信詳細
+          success: 成功
+          failure: 失敗
+      click:
+        title: クリック数
+        ctr: CTR
+        detail:
+          title: クリック詳細
+          th: クリック
+        number:
+          title: クリック件数
+          th:
+            url: URL名
+            click: クリック数
+      conversion:
+        title: CV数
+        outcome:
+          title: 成果
+          direct: 直接
+          indirect: 間接
+          order: 受注数
+          money: 受注金額
+        cv:
+          title: コンバージョン
+          rank: 順位
+          name: CV名
+          direct: 直接CV
+          indirect: 間接CV
+          cvr: CVR
+      record:
+        number: 件数
+        percentage: 割合
+        before: 前回比
+      header:
+        time: 配信日時
+        period: 集計期間
+
+en:
+  translation:
+    common:
+      menu:
+        data_palette: Data Palette
+      button:
+        add: Add
+        add_new: Add new
+        apply: Apply
+        cancel: Cancel
+        check: Check
+        close: Close
+        create_new: Create new
+        download: Download
+        back: Back
+        copy: Copy
+        edit: Edit
+        end: End
+        delete: Delete
+        details: Details
+        file_detail: File detail
+        finish: Finish
+        force_stop: Force stop
+        list_donwloads: List downloads
+        list_uploads: List uploads
+        import: Import
+        set: Setting
+        new: New
+        next: Next
+        ok: OK
+        pause: Pause
+        reset: Reset
+        save: Save
+        setup: Setup
+        send: Send
+        link: Link
+        image: Image
+        emotion: Emotion
+        fixed_text: Fixed Text
+        cell: Insert cell
+        data: Data
+        recommend: Recommend
+        skip: Skip
+        output: Output
+        operation_history: Operation history
+        archive: archive
+        select: Select
+        copy_clipboard: Copy
+        execute: Execute
+        confirm: Confirm
+        modify: Modify
+        unarchive: Unarchive
+        complete: Complete
+        reload: Reload
+        register: register
+        support: Support
+        enable: Enable
+        disable: Disable
+        insert: Insert
+        select_all: Select all
+        release_all: release all
+        approval: Approval
+        approval_request: Approval request
+        setting:
+          auth: Setting auth
+          notification: Setting notification
+          sample_data: setting sample data
+        history: history
+        usage_situation: usage situation
+        explanatory_note: explanatory note
+        note: note
+        test_send: test send
+      url:
+        default: URL
+        link: Link
+        short: Shortened URL
+        unsubscribe: Unsubscribe URL
+      time:
+        am: am
+        formats:
+          default: "%{- date, %B %d, %Y %H:%M:%s}"
+          long: "%{- date, %a, %d %b %Y %H:%M:%S %z}"
+          short: "%{- date, %d %b %H:%M}"
+          date: "%{- date, %d %b}"
+          time: "%{- date, %H:%M}"
+          datetime: "%{- date, %d %b %H:%M}"
+          created_at: "%{- date, %Y/%m/%d}"
+          full_date: "%{- date, %Y/%m/%d (%a)}"
+        pm: pm
+        day: Day
+        weekly:
+          monday: Monday
+          tuesday: Tuesday
+          wednesday: Wednesday
+          thursday: Thursday
+          friday: Friday
+          saturday: Saturday
+          sunday: Sunday
+          '1': Mon
+          '2': Tue
+          '3': Wed
+          '4': Thu
+          '5': Fri
+          '6': Sat
+          '0': Sun
+      tooltip:
+        add:
+          folder: Add folder
+        align:
+          default: Align
+        change:
+          default: Change
+          interval: Change interval
+        check:
+          site: Check Website
+        color:
+          default: Color
+          text: Text color
+          fill: Fill color
+        copy:
+          default: Copy
+          url:
+            default: Copy URL
+            success: Copied URL
+        created_by:
+          default: Created by
+        delete:
+          default: Delete
+        download:
+          default: Download
+        edit:
+          default: Edit
+        element:
+          default: Element
+          image: Image
+          text: Text
+          link: Link
+        format:
+          default: Format
+          bold: Bold
+          italic: Italic
+          underline: Underline
+          strikethrough: Strikethrough
+        help:
+          default: Help
+        insert:
+          default: Insert
+          date: Date Insert
+          data: Insert data
+          recommend: Insert recommend
+          signature: Insert signature
+          if_statement: Insert if statement
+          html_css_file: Insert HTML/CSS file
+        name:
+          default: Name
+        preview:
+          default: Preview
+        redo:
+          default: Redo
+        sample_data:
+          default: Sample data
+          setting: Sample data setting
+        setting:
+          default: Setting
+          content: Setting content
+          auth: Auth setting
+          notification: Notification setting
+          aggregation_frequency: Aggregation frequency
+        sort:
+          default: Sort
+        toggle:
+          grid_list: Grid/List
+          graph_view: Graph view
+        tutorial:
+          default: Tutorial
+        undo:
+          default: Undo
+        updated_at:
+          default: Updated at
+          last: Last updated at
+        upload:
+          default: Upload
+        usage_stats:
+          default: Usage stats
+        version:
+          default: Version
+          check: Check this version
+        history:
+          default: Updated history
+          exec: Execution History
+        display:
+          width_change: Width change
+        export:
+          default: Export
+        approval:
+          default: approval
+          request: approval request
+        save:
+          default: Save
+        see_detail:
+          default: See detail
+        capture:
+          setting: Import setting
+        title:
+          default: title
+        viewers:
+          default: Viewers
+      cooperation_options:
+        all: All status
+        after: Before cooperation
+        complete: Cooperation completed
+        failure: Cooperation failure
+        importing: Importing
+        import_complete: Import complete
+        error_skip_complete: Error skip and import complete
+        capture_failure: Capture failure
+      sort_by:
+        name_asc: Name A→Z(△ASC)
+        name_desc: Name Z→A(▼DESC)
+        created_at_asc: Created at(△ASC)
+        created_at_desc: Created at(▼DESC)
+        updated_at_asc: Updated at(△ASC)
+        updated_at_desc: Updated at(▼DESC)
+        last_updated_at_asc: Last updated at(△ASC)
+        last_updated_at_desc: Last updated at(▼DESC)
+      placeholder:
+        custom: Enter %{subject}
+        subject:
+          aggregation_period: Aggregation period
+          keyword: Keyword
+          item_name: Item name
+        auth:
+          select: Select authority
+        notification:
+          select: Select notification
+        content_name: Name the content
+        recommend_name: Enter recommend name
+        enter_url: Enter URL
+        item_name: Enter item name
+        memo: Enter memo
+        page: Enter page
+        user_name: Enter user name
+        full_name: Enter full name
+        group_name: Enter group name
+        mail_address: Enter mail address
+        department: Enter department
+        position: Enter position
+        select: Select from options
+        enter_number: Enter a number
+        name: Enter a name
+        search: Search item
+        text: Enter a text
+      unit:
+        people: people
+        number: number
+        yen: yen
+        times: times
+    toast:
+      in_progress: "Now Downloading..."
+      complete: "Download completed"
+    select_cell:
+      hakase: Select the cell<br>you want to insert<br>If it is not displayed on the screen, <br>use the refinement to search.
+    report:
+      delivery:
+        title: Number of deliveries
+        detail:
+          title: Delivery details
+          success: success
+          failure: failure
+      click:
+        title: Clicks
+        ctr: CTR
+        detail:
+          title: Click details
+          th: Click
+        number:
+          title: Number of clicks
+          th:
+            url: URL name
+            click: Clicks
+      conversion:
+        title: Number of CVs
+        outcome:
+          title: Outcome
+          direct: Directly
+          indirect: Indirect
+          order: Number of orders
+          money: Order amount
+        cv:
+          title: conversion
+          rank: Ranking
+          name: CV name
+          direct: Direct CV
+          indirect: Indirect CV
+          cvr: CVR
+      record:
+        number: number
+        percentage: percentage
+        before: Compared to last time
+      header:
+        time: Delivery date and time
+        period: Aggregation period

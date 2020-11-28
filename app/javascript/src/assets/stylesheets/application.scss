@@ -1,0 +1,10 @@
+// サービスに必要なものだけを選択する。
+// ページのテンプレートには .<ページ名>-page クラスを付けること
+$import-pages: (
+  template
+);
+
+@import "../../../../assets/stylesheets/variables";
+@import "layout";
+@import "pages/index";
+@import "components/index";

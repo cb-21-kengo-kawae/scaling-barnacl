@@ -1,0 +1,318 @@
+en:
+  brand: b→dash
+
+  copyright_html: '&copy; From Scratch Inc. 2016'
+
+  language:
+    ja: 日本語
+    en: English
+    switch: Switch language
+
+  date:
+    formats:
+      zelda_default: "%Y/%m/%d"
+  time:
+    formats:
+      zelda_default: "%Y/%m/%d %H:%M"
+
+  menu:
+    home: Home
+    platform:
+      target: Target
+      view: Change View
+      account: Account Setting
+      data: Data Management
+      setting: Settings
+      ads: Ads/DMP
+    marketing:
+      label: Marketing
+      campaign: Campaign
+      scenario: Scenario
+    sfa:
+      label: Sales
+      project: Product
+      company: Company
+      merchandise: Merchandise
+      sales_representative: Sales Representative
+      business_file: Bisiness File
+      lead: Customer
+    config:
+      profile: Profile
+      switch_data_views: Switch Data Views
+      sign_out: Log out
+    contact:
+      label: Contact
+    action:
+      label: Action
+    push_notification:
+      label: Push Notification
+    line:
+      label: LINE
+    sms:
+      label: SMS
+    customer:
+      label: Audiences
+    collaboration:
+      label: Dashboard
+    analyses:
+      label: Analyses
+    recommendation:
+      label: Recommendation
+    clerk:
+      label: Web Test
+    receptions:
+      label: Web Receptions
+    mobile_receptions:
+      label: Mobile Receptions
+    contents:
+      label: Contents
+      sites: Sites
+      themes: Themes
+      creatives: Creatives
+      form_respondents: Report
+    preparation:
+      label: Data Palette
+    billing:
+      label: Status
+    support:
+      label: Support
+    bi:
+      label: BI
+    crm:
+      label: CRM
+    scoring:
+      label: Scoring
+    cart:
+      label: Cart
+
+  policy_control:
+    has_no_policy: Has no policy
+    has_no_contract: Has no contract
+
+  app_launcher:
+    no_replay: I want to hide this launcher at logged in.
+    create_shortcut: Create this shortcut.
+
+  sidebar:
+    settings:
+      account:
+        label: Account Setting
+        contract: Contract Information
+        logging: Account Logging Setting
+        users:
+          label: Users
+          index: Overview
+        login_histories:
+          label: Access Histories
+          index: Overview
+        ad_agencies:
+          label: Ad Agencies
+          index: Overview
+        role: Role
+        data_view: Data Views
+        tracking_info: Tracking Information
+        domain: Cross-domain Setting
+        sdk_measurement_sets: App Measurement Sets
+        mobile_verify: Mobile verify
+        short_url:
+          label: Short URL
+          short_url_setting: Short URL Setting
+        aws_settings:
+          label: AWS setting
+          aws_accounts: AWS account setting
+          aws_iams: AWS IAM setting
+      external_service:
+        label: External Services
+        sftp_key: SFTP-key Setting
+        api_setting: API Connection Setting
+        ad_vendors: Ads/DMP Vendors Setting
+        ad_vendor_accounts: DMP Ad Account Setting
+      measurement_url:
+        label: Tracking URL Setting
+        ads: Advertisement URL Setting
+      data_view:
+        label: Data View Setting
+        information: Information
+        logging: Logging Setting
+        available_data: Data Setting
+        user: Users
+        web_log_filter: Web Log Filter Setting
+        excluded_ip_address: Excluded IP Address Setting
+        export: Data Export
+        external_table_relations: Relation Setting
+        idmappings: Web Mobile Relation
+        idmappings_sub: Web Mobile Relation Setting
+        permitted_ip_addresses: Permitted Ip Addresses Setting
+        common_tag_setting: Common Tag Settings
+        cart_tag_setting: Cart Tag Settings
+      goals:
+        label: Goals
+      analyse:
+        label: Analyse
+        column: Report Columns
+        pattern: Data Pattern Setting
+        culc: Culculation Index Setting
+        collection: Collection Index Setting
+        delivery: Report Delivery
+      action:
+        label: Action
+        scenario: Scenario
+        scenario_approval_option: Approval Setteings
+        mail: E-Mail
+        mail_setting: E-Mail Setting
+        mail_restriction: Delivery Restriction Setting
+        mail_unsubscribe: Unsubscribe Mail Address Setting
+        push: Push Notification
+        push_client: Push Client Setting
+        push_send_options: Delivery Restriction Setting
+        line: LINE Setting
+        line_channels: LINE Channel Setting
+        line_send_options: Delivery Restriction Setting
+        sms: SMS
+        sms_setting: SMS Setting
+        win_push: Windows Push Notification
+        win_push_client: Windows Push Client Setting
+        win_push_send_options: Delivery Restriction Setting
+        scenario_external_linkage: Scenario External Linkage
+        yappli_client: Yappli Client Setting
+        yappli_send_options: Delivery Restriction Setting
+      contents:
+        label: Contents Management
+        senders: Sender Of Automatic Reply Email Setting
+        recipients: Notice Of Administrator Email Setting
+        csr: Create CSR And Secret Key
+      recommendation:
+        label: Recommendation
+        data_set_setting: Recommend Data Set Setting
+      clerk:
+        label: Web Test
+        tag_setting: Web Test Tag
+      receptions:
+        label: Web Receptions
+        general_setting: General Setting
+        tag: Web Receptions Tag
+        tag_setting: Web Receptions Tag Setting
+      customer:
+        label: Customer
+        suspend: Distribution Cancell
+      audience:
+        label: Audience
+        scoring_behavior_master: Scoring Behavior Master Setting
+      other:
+        label: Other
+
+  admin:
+    menu:
+      applications:
+        label: OAuth Application Settings
+        admins: Admins
+        users: Users
+      services:
+        label: Services
+        admin: Admin
+        auth: Auth
+        platform: Platform
+        action: Action
+        contents: Contents
+        report: Report
+        recommend: Recommend
+        clerk: Clerk
+        scoring: Scoring
+        preparation: Preparation
+    sidebar:
+      dashboard: Dashboard
+
+  components:
+    zelda_labeling:
+      placeholder: Please enter the name of the label
+      tag_placeholder: ''
+      selected_label: ''
+      select_label: ''
+      deselect_label: ''
+
+  notifications:
+    empty: There is no notification message
+    category:
+      my_report: MY REPORT
+      segment: SEGMANT
+      data_management: DATA MANAGEMENT
+      customer: CUSTOMER DATA
+      transaction: TRANSACTION DATA
+      order: ORDER DATA
+      data_integration: DATA PALETTE
+      template_report: TEMPLATE REPORT
+      crm: CRM
+    message:
+      my_report:
+        success: 'Totalization of the %s is completed'
+        failure: 'Totalization of the %s is failed'
+      segment: 'Extraction of segment %s is completed'
+      download:
+        success: '%s can be downloaded'
+        failure: '%s could not make download file'
+      import:
+        success:
+          with_name: 'Importing data of %s is completed'
+          without_name: 'Importing data is completed'
+        failure:
+          with_name: 'Importing data of %s is failed'
+          without_name: 'Importing data is failed'
+      data_management:
+        search:
+          complete: '%s is completed'
+          complete_with_expired_at: 'Data filter extraction of %s (validated date:%t) is completed'
+      data_integration:
+        success: 'Importing data of %s is completed'
+        failure: 'Importing data of %s is failed'
+        linkages:
+          file_name_invalid:
+            failure: 'Failed to import %s *This file name contains illegal value'
+      template_report:
+        success: 'Totalization of the %s is completed'
+        failure: 'Totalization of the %s is failed'
+      crm:
+        apply:
+          success: 'Applying display item setting of %s is completed'
+          failure: 'Applying display item setting of %s is failed'
+        search:
+          complete: '%s is completed'
+          complete_with_expired_at: 'Customer search process (validated date:%s) is completed'
+          timeout: 'Customer search process is timed out'
+    tag:
+      my_report:
+        success: 'Totalization completed'
+        failure: 'Totalization failed'
+      segment: 'Extraction of segment completed'
+      download:
+        success: 'Download file make completed'
+        failure: 'Download file make failed'
+      import:
+        success:
+          with_name: 'Importing data completed'
+          without_name: 'Importing data completed'
+        failure:
+          with_name: 'Importing data failed'
+          without_name: 'Importing data failed'
+      data_management:
+        search:
+          complete: 'Search completed'
+      data_integration:
+        success: 'Importing data completed'
+        failure: 'Importing data failed'
+        linkages:
+          file_name_invalid:
+            failure: 'Failed to import'
+      template_report:
+        success: 'Totalization completed'
+        failure: 'Totalization failed'
+      crm:
+        apply:
+          success: 'Applying display item setting completed'
+          failure: 'Applying display item setting failed'
+        search:
+          complete: 'Search completed'
+          timeout: 'Search timed out'
+    time:
+      minute: 'minute ago'
+      hour: 'hour ago'
+      day: 'day ago'

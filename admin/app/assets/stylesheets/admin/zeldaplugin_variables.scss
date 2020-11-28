@@ -1,0 +1,171 @@
+/* ------------------------------------
+breakpoint
+------------------------------------ */
+$grid-breakpoints: (
+  xs: 0,
+  sm: 10px,
+  md: 768px,
+  lg: 992px,
+  xl: 1200px
+) !default;
+
+/* ------------------------------------
+color
+------------------------------------ */
+$brand-primary:#00b0ea!default;
+$brand-primary-light:#E2EFF9!default;
+$brand-primary-dark:#0070A5;
+$brand-primary-darker:#004E72;
+
+$brand-success:#2bbe8f !default;
+$brand-info:#0a8ded !default;
+$brand-warning:#f9c940 !default;
+$brand-warning-lighter:#f9c940 !default;
+$brand-danger:#f26761 !default;
+$color-primary-dark:$brand-primary-dark!default;
+$color-primary-darkest:$brand-primary-darker!default;
+$gray-darker:#333!default;
+$gray-dark:#484848!default;
+$gray:#808080!default;
+$gray-middle:#9b9b9b!default;
+// $gray-light:#dedede!default;
+$gray-light:#eaeaea!default;
+$gray-lighter:#EBF0F2!default;
+
+$secondary: #ccd5d9;
+$secondary-dark: #7698a2;
+$secondary-light: #dee5e8;
+$secondary-lighter: #EBF0F2;
+
+$color-trigger:#F98181!default;
+$color-action:#FFB839!default;
+$color-filter:#5FA9E4!default;
+$color-branch:#10B085!default;
+$shadow-color:rgba(105,105,105,.3)!default;
+$shadow-color-dark:rgba(0,0,0,.3)!default;
+
+$filter-button-color:#829299!default;
+$progress-bg :#fff!default;
+
+// $color-stage01:#B9DDF0;
+// $color-stage02:#F2F4C4;
+// $color-stage03:#faf2cc;
+// $color-stage04:#FEE9C7;
+// $color-stage05:#FDD9DA;
+
+/* ------------------------------------
+nav
+------------------------------------ */
+$progress-nav-bg:#cfcfcf!default;
+/* ------------------------------------
+daterangepicker
+------------------------------------ */
+
+$daterangepicker-active-bg-color:$brand-primary;
+$daterangepicker-cell-hover-bg-color:$brand-primary-light;
+$daterangepicker-in-range-bg-color:$brand-primary-light;
+$daterangepicker-ranges-bg-color:#fff;
+$daterangepicker-ranges-border-color:$brand-primary;
+$daterangepicker-control-disabled-color:$gray-light;
+/* ------------------------------------
+border
+------------------------------------ */
+$border-color:#D3E0E6!default;
+$border-color-dark:#a5b3b9!default;
+$pre-border-color:$gray;
+$border-radius:.4rem;
+$border-radius-lg:.8rem;
+/* ------------------------------------
+layout
+------------------------------------ */
+$side-pane-width: 316px !default;
+/* ------------------------------------
+grid
+------------------------------------ */
+$grid-gutter-width-base: 16px !default;
+/* -----------
+font
+------------ */
+$font-size-root:10px;
+$font-size-base:1.3rem;
+$font-size-lg:2rem !default;
+$font-size-sm:1.5rem !default;
+$font-size-xs:1.1rem !default;
+$font-size-xlg:2.8rem !default;
+/* -----------
+space
+------------ */
+$spacer:1rem!default;
+$spacer-x: $spacer !default;
+$spacer-y: $spacer !default;
+$spacers: (
+  0: (
+    x: 0,
+    y: 0
+  ),
+  1: (
+    x: ($spacer-x * 0.4),
+    y: ($spacer-y * 0.4)
+  ),
+  2: (
+    x: ($spacer-x * 0.8),
+    y: ($spacer-y * 0.8)
+  ),
+  3: (
+    x: ($spacer-x * 1.6),
+    y: ($spacer-y * 1.6)
+  ),
+  4: (
+    x: ($spacer-x * 2.4),
+    y: ($spacer-y * 2.4)
+  ),
+  5: (
+    x: ($spacer-x * 3.2),
+    y: ($spacer-y * 3.2)
+  )
+) !default;
+$spacer1:($spacer * 0.4);
+$spacer2:($spacer-x * 0.8);
+$spacer3:($spacer-x * 1.6);
+$spacer4:($spacer-x * 2.4);
+$spacer5:($spacer-x * 3.2);
+/* -----------
+form
+------------ */
+$form-control-size-xxs: 42px;
+$form-control-size-xs:100px;
+$form-control-size-sm:150px;
+$form-control-size-md:240px;
+$form-control-size-lg:320px;
+$form-control-height-sm:50px;
+$form-control-height-md:150px;
+$form-control-height-lg:240px;
+/* -----------
+table
+------------ */
+
+$table-bg-accent:#fbfcfc!default;
+$table-bg-hover:#e2eff9!default;
+$table-cell-padding:1.4rem!default;
+$table-border-color:#D3E0E6!default;
+/* -----------
+button
+------------ */
+$btn-secondary-color:#808080!default;
+$btn-secondary-bg:#EBF0F2!default;
+$btn-secondary-border:#ccd5d9!default;
+
+/* ------------------------------------
+tag
+------------------------------------ */
+$tag-font-size:$font-size-base;
+$tag-size-s:44px;
+$tag-size-m:68px;
+$tag-size-l:80px;
+$tag-size-xl:95px;
+/* ------------------------------------
+animation
+------------------------------------ */
+$speed-high:.2s;
+$speed:.5s;
+$speed-slow:1s;

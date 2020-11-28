@@ -1,0 +1,117 @@
+.nav-tabs{
+  border-bottom:solid 1px $border-color;
+  .nav-link{
+    text-decoration: none!important;
+    cursor: pointer;
+    box-shadow: 0px 2px 4px 1px $shadow-color;
+    padding: $spacer2 $spacer3;
+    border: none;
+    margin-right: $spacer2;
+    background: $gray-light;
+    font-weight: bold;
+    &.active,&.active:focus{
+      background: $brand-primary!important;
+      color:#fff!important;
+      &:hover{
+        background: $brand-primary-dark;
+        color: #fff;
+      }
+    }
+  }
+}
+.nav-tabs+.tab-content{
+  &.tab-content-bordered{
+    border: 1px solid $border-color;
+    border-top: none;
+    background: #fff;
+    z-index: 1;
+    position: relative;
+  }
+}
+// .nav-progress{
+//   border-bottom: solid 3px $gray-middle;
+//   .nav-item{
+//     text-align: center;
+//   }
+//   .nav-link{
+//     display: inline-block;
+//     line-height: 2.7rem;
+//     position:relative;
+//     font-weight: bold;
+//     color: $gray-middle;
+//     &:after{
+//       position: absolute;
+//       height: 0;
+//       width: 0;
+//       content: "●";
+//       bottom: 1.1rem;
+//       z-index: 999;
+//       left: 50%;
+//       margin-left: -.5em;
+//       font-size: 16px;
+//     }
+//     &.active{
+//       color: $brand-primary;
+//       &:after{
+//         color: $brand-primary;
+//       }
+//     }
+//   }
+// }
+.nav-progress{
+  line-height: 44px;
+  .nav-item{
+    text-align: center;
+    padding: 0;
+    &:first-child{
+      .nav-link.active{
+        &:before{
+          display: none;
+        }
+      }
+    }&:last-child{
+      .nav-link.active{
+        &:after{
+          display: none;
+        }
+      }
+    }
+  }
+  .nav-link{
+    display: block;
+    position:relative;
+    font-weight: bold;
+    color: $gray-middle;
+    background: $progress-nav-bg;
+    &.active{
+      color: $brand-primary;
+      background: #fff;
+      &:after{
+        position: absolute;
+        height: 0;
+        width: 0;
+        content: "";
+        z-index: 999;
+        right: -44px;
+        border: solid 22px #fff;
+        border-bottom-color: transparent;
+        border-top-color: transparent;
+        border-right-color: transparent;
+        top: 0;
+      }
+      &:before{
+        position: absolute;
+        height: 0;
+        width: 0;
+        content: "";
+        z-index: 999;
+        left: 0;
+        border: solid 22px $progress-nav-bg;
+        border-bottom-color: transparent;
+        border-top-color: transparent;
+        border-right-color: transparent;
+        top: 0;
+      }
+    }
+  }
+}

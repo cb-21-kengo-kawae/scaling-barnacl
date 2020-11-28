@@ -1,0 +1,11 @@
+public_url: "http://localhost"
+private_url: "http://web-server"
+
+# Database
+db:
+  password: test
+
+services:
+  action3rd:
+    relative_url_root: '/action3rd'
+    after_sign_out_path: '/platform'

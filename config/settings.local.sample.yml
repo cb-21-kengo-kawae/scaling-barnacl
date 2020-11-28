@@ -1,0 +1,37 @@
+public_url: 'http://localhost'
+private_url: 'http://localhost'
+
+db:
+  host: 127.0.0.1
+common_db:
+  host: 127.0.0.1
+
+redis:
+  session:
+    host: 127.0.0.1
+  cache:
+    host: 127.0.0.1
+  search:
+    host: 127.0.0.1
+  platform_job:
+    host: 127.0.0.1
+  short_url:
+    host: 127.0.0.1
+  externaldata:
+    host: 127.0.0.1
+
+auth:
+ app_redirect_uri: "http://localhost/template4th/auth/callback"
+
+admin:
+  auth:
+    app_id: 'template4th_admin_uid'
+    app_secret: 'template4th_admin_secret'
+    app_redirect_uri: 'http://localhost/template4th/admin/auth/callback'
+    app_scopes: 'admin'
+    public_url: 'http://localhost'
+    private_url: 'http://localhost'
+
+activity:
+  tag_host: 'localhost'
+  log_host: 'localhost'

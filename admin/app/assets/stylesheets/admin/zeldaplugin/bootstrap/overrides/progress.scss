@@ -1,0 +1,26 @@
+// アップデートで仕様が変更されたので要調整
+.loading-wrap{
+  background: $gray-lighter;
+  padding: 0 $spacer5;
+  height: 100%;
+  text-align: center;
+  .loading-msg{
+    font-size: $font-size-sm;
+    font-weight: bold;
+    color: $gray;
+  }
+  .loading-img{
+    margin: 0 auto;
+  }
+  .progress-wrap{
+    width: 100%;
+    &.progress-only-icon{
+      top:50%;
+    }
+    .progress{
+      margin-bottom: 0;
+      height: 2rem;
+      background: #fff;
+    }
+  }
+}

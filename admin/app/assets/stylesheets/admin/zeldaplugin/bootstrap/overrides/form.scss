@@ -1,0 +1,249 @@
+.form-control::-webkit-input-placeholder { color: $gray-light;}
+.form-control:-moz-placeholder { color: $gray-light; }
+.form-control::-moz-placeholder { color: $gray-light; }
+.form-control:-ms-input-placeholder { color: $gray-light; }
+.form-control.alert-danger::-webkit-input-placeholder { color: $brand-danger;}
+.form-control.alert-danger:-moz-placeholder { color: $brand-danger; }
+.form-control.alert-danger::-moz-placeholder { color: $brand-danger; }
+.form-control.alert-danger:-ms-input-placeholder { color: $brand-danger; }
+.form-control{
+	&.custom-select.alert-danger,&.custom-select-search.alert-danger{
+		border-color: $alert-danger-border!important;
+	}
+}
+.form-size-auto{
+	width: auto!important;
+}
+.form-size-xxs{
+	width: $form-control-size-xxs!important;
+}
+.form-size-xs{
+	width: $form-control-size-xs!important;
+}
+.form-size-s{
+	width: $form-control-size-sm!important;
+}
+.form-size-m{
+	width: $form-control-size-md!important;
+}
+.form-size-l{
+	width: $form-control-size-lg!important;
+}
+.form-height-s{
+	height: $form-control-height-sm!important;
+}
+.form-height-m{
+	height: $form-control-height-md!important;
+}
+.form-height-l{
+	height: $form-control-height-lg!important;
+}
+.form-control{
+	color: $gray-dark;
+	&:focus{
+		color: inherit;
+	}
+	&input{
+		height: 2.8rem;
+	}
+}
+
+.form-check-label{
+	position:relative;
+	padding:$spacer1 0 $spacer1 1.25rem;
+}
+.form-item-tel{
+	input{
+		width: 120px!important;
+	}
+}
+.form-item-colorpicker{
+	border-radius: 0;
+	width: 28px;
+	padding: 0.5rem 0.75rem;
+}
+.form-item-time{
+	input{
+		width: 50px!important;
+	}
+}
+.form-item-name{
+	input{
+		width: calc((100% - .5rem) / 2)!important;
+		min-width: 40px;
+		max-width: 200px;
+	}
+}
+.form-item-subject{
+	  border-radius: 0;
+    border: none;
+    border-bottom: solid 1px $input-border-color;
+}
+// 削除予定
+.form-hidden-search{
+	position:relative;
+	label.i-search+input{
+		-webkit-transition: width $speed ease;
+		   -moz-transition: width $speed ease;
+		    -ms-transition: width $speed ease;
+		     -o-transition: width $speed ease;
+		        transition: width $speed ease;
+	    width: 0px!important;
+	    visibility: hidden;
+	    position:absolute;
+		&.form-show{
+			width:200px!important;
+			visibility: visible;
+			position:relative;
+		}
+	}
+	label.i-search+.input-group{
+		visibility: hidden;
+		select:first-child,
+		input:last-child{
+		  width: 0px!important;
+		  visibility: hidden;
+		  position:absolute;
+			-webkit-transition: width $speed ease;
+			   -moz-transition: width $speed ease;
+			    -ms-transition: width $speed ease;
+			     -o-transition: width $speed ease;
+			        transition: width $speed ease;
+		}
+		&.form-show{
+			select:first-child{
+				width:auto!important;
+				visibility: visible;
+				position:relative;
+				border-right: 0;
+			}
+			input:last-child{
+				width:200px!important;
+				visibility: visible;
+				position:relative;
+			}
+		}
+	}
+}
+// 表キーワード検索
+.form-table-search{
+	display: -moz-flex;
+  display: -ms-flex;
+  display: -o-flex;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+	width: 33px!important;
+	-webkit-transition: width $speed ease;
+	   -moz-transition: width $speed ease;
+	    -ms-transition: width $speed ease;
+	     -o-transition: width $speed ease;
+	        transition: width $speed ease;
+	.form-table-search-btn{
+		margin-right: $spacer1;
+	}
+	.form-table-search-input{
+    -ms-flex-preferred-size: 0;
+    flex-basis: 0;
+    -webkit-box-flex: 1;
+    -ms-flex-positive: 1;
+    flex-grow: 1;
+    max-width: 100%;
+		overflow: hidden;
+		display: inline-block;
+	}
+	&.is-show{
+		width: 265px!important;
+		&.form-size-l{
+			width:$form-control-size-lg!important;
+		}
+		&.form-size-m{
+			width:278px!important;
+		}
+	}
+}
+
+.custom-select{
+    height: 2.8rem!important;
+    background-color:#fff;
+		background-image: image-url('zeldaplugin/select-arrow.svg');
+		background-size: auto 11px;
+    &:focus,&:disabled{
+    	background-color:#fff;
+    }
+}
+.custom-file{
+	height:3rem;
+	width: 100%;
+	.custom-file-control{
+		padding:0 6rem 0 1rem;
+		height:3rem;
+		line-height:3rem;
+		&:after {
+		    line-height: 3rem;
+		}
+		&:before {
+		    content: "選択";
+		    position: absolute;
+		    top: -1px;
+		    right: -1px;
+		    bottom: -1px;
+		    z-index: 6;
+		    height: 3rem;
+		    display: block;
+		    padding: 0 1rem;
+		    line-height: 3rem;
+		    color: $gray;
+		    background-color: $gray-lighter;
+		    border: 1px solid $gray-light;
+		    border-radius: 0 $border-radius $border-radius 0;
+		}
+	}
+}
+
+
+.form-with-icon{
+	position:relative;
+	i{
+		position: absolute;
+		left:0;
+		top:25%;
+	}
+	.form-control{
+		margin-left:2rem;
+		width: calc(100% - 2rem);
+	}
+}
+.form-period{
+	.form-control{
+		min-width: 244px!important;
+	}
+}
+.form-inline{
+	.form-period{
+		.form-control{
+			width: auto!important;
+		}
+		.input-group-addon{
+			display: inline-block;
+		}
+	}
+}
+
+//button_to 対策
+form.button_to{
+  display: inline-block;
+}
+//FF IEバグ対策
+.input-group{
+	.form-control{
+		min-width: 0;
+		min-height: 28px;
+		line-height: 1;
+	}
+	.input-group-addon{
+		line-height: 1.25;
+		min-height: 2.8rem;
+		cursor: pointer;
+	}
+}

@@ -1,0 +1,10 @@
+// App.vueで制御するため、全アプリを Vue に移行するまでは、初期表示部分のみを
+// app/assets/stylesheets/layout.scss を override
+
+.l-header {
+  opacity: 1;
+}
+
+.l-main {
+  visibility: unset;
+}

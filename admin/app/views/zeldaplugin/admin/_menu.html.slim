@@ -1,0 +1,19 @@
+.header.clearfix
+  = render 'zeldaplugin/admin/menu_list'
+  .header-user.d-flex.float-xs-right.mr-3
+    / span.flex-xs-middle
+    /   span.avatar-dummy
+    /     i.i-person
+    .flex-xs-middle.text-ellipsis.pl-1
+      span
+        = admin_operator.try(:email)
+      br
+      span
+        = admin_operator.try(:role)
+      .header-user-btn.btn-group.admin-header
+        button.dropdown-toggle.mr-1 data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"
+          i.i-arrow_drop_down
+        .dropdown-menu.dropdown-menu-right
+          button.header-btn-logout.btn.btn-outline-primary
+            i.i-logout.mr-1
+            = link_to t('menu.config.sign_out'), admin_operator.try(:sign_out_path), method: :delete

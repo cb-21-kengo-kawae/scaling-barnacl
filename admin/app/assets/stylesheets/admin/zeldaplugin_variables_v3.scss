@@ -1,0 +1,158 @@
+/* ------------------------------------
+breakpoint
+------------------------------------ */
+$grid-breakpoints: (
+  xs: 0,
+  sm: 10px,
+  md: 768px,
+  lg: 992px,
+  xl: 1200px
+);
+
+/* ------------------------------------
+color
+------------------------------------ */
+$brand-primary: #00b0ea;
+$brand-primary-light: #e2eff9;
+$brand-primary-dark: #0070a5;
+$brand-primary-darker: #004e72;
+
+$brand-success: #2bbe8f;
+$brand-info: #00b0ea;
+$brand-warning: #f9c940;
+$brand-danger: #f26761;
+$color-primary-dark: $brand-primary-dark;
+$color-primary-darkest: $brand-primary-darker;
+
+$gray-darker: #333;
+$gray-dark: #484848;
+$gray: #808080;
+$gray-light: #9b9b9b;
+$gray-lighter: #f4f4f4;
+
+$white: #fff;
+
+$secondary: #ccd5d9;
+$secondary-dark: #7698a2;
+$secondary-light: #dee5e8;
+$secondary-lighter: #ebf0f2;
+
+$color-trigger: #f98181;
+$color-action: #ffb839;
+$color-filter: #5fa9e4;
+$color-branch: #10b085;
+$shadow-color: rgba(105, 105, 105, 0.3);
+$shadow-color-dark: rgba(0, 0, 0, 0.3);
+
+$readonly-bg-color: #f0ffff;//TODO:色の検討
+/* ------------------------------------
+daterangepicker
+------------------------------------ */
+
+$daterangepicker-active-bg-color: $brand-primary;
+$daterangepicker-cell-hover-bg-color: $brand-primary-light;
+$daterangepicker-in-range-bg-color: $brand-primary-light;
+$daterangepicker-ranges-bg-color: #fff;
+$daterangepicker-ranges-border-color: $brand-primary;
+$daterangepicker-control-disabled-color: $gray-lighter;
+
+/* ------------------------------------
+border
+------------------------------------ */
+$border-color: #d3e0e6;
+$border-color-dark: #a5b3b9;
+$pre-border-color: $gray;
+$border-radius: 0.4rem;
+$border-radius-lg: 0.8rem;
+$border-radius-xlg: 2rem;
+$border-radius-xxlg: 4rem;
+$card-radius: $border-radius-xlg;
+
+/* ------------------------------------
+layout
+------------------------------------ */
+$side-pane-width: 316px;
+
+/* ------------------------------------
+grid
+------------------------------------ */
+$grid-gutter-width-base: 16px;
+
+/* -----------
+font
+------------ */
+$font-size-root: 10px;
+$font-size-base: 1.3rem;
+$font-size-xxxl: 3vw;//iconとか
+$font-size-xxl: 1.8vw;//main-desciption
+$font-size-xl: 1.6vw;
+$font-size-l: 1.4vw;
+$font-size-m: 1.2vw;//main-msg, 平文もこれでいいか？
+$font-size-s: 1vw;//小さい文字？
+$font-size-xs: 1.1rem;
+$font-weight-bold: 600;
+/* -----------
+space
+------------ */
+$spacer: 1rem;
+$spacer-x: $spacer;
+$spacer-y: $spacer;
+$spacer1: ($spacer * 0.4);
+$spacer2: ($spacer-x * 0.8);
+$spacer3: ($spacer-x * 1.6);
+$spacer4: ($spacer-x * 2.4);
+$spacer5: ($spacer-x * 3.2);
+/* -----------
+form
+------------ */
+$form-control-size-xxs: 42px;
+$form-control-size-xs: 100px;
+$form-control-size-s: 150px;
+$form-control-size-m: 240px;
+$form-control-size-l: 320px;
+/* -----------
+table
+------------ */
+$table-bg-accent:#fbfcfc;
+$table-bg-hover:#e2eff9;
+$table-cell-padding:1.4rem;
+$table-border-color:#d3e0e6;
+/* -----------
+button
+------------ */
+$btn-secondary-color: $secondary-dark;
+$btn-secondary-bg: $secondary-lighter;
+$btn-secondary-bg-hovered: $secondary-lighter;
+$btn-secondary-bg-pushed: $secondary-light;
+$btn-secondary-border: $secondary;
+$btn-normal-color: $secondary-dark;
+$btn-normal-bg: $secondary-lighter;
+$btn-normal-bg-hovered: $secondary-light;
+$btn-normal-bg-pushed: $secondary;
+$btn-radius: 10px;
+$btn-radius-s: 8px;
+$btn-radius-l: 13px;
+/* ------------------------------------
+tag
+------------------------------------ */
+$tag-font-size: $font-size-base;
+$tag-size-s: 44px;
+$tag-size-m: 68px;
+$tag-size-l: 80px;
+$tag-size-xl: 95px;
+/* ------------------------------------
+animation
+------------------------------------ */
+$speed-high: 0.2s;
+$speed-normal: 0.4s;
+$speed-slow: 1s;
+/* ------------------------------------
+alert
+------------------------------------ */
+$alert-danger-border:$brand-danger;
+$alert-warning-bg:$brand-warning;
+/* ------------------------------------
+layout
+------------------------------------ */
+$header-height: 48px;
+$header-nav-size: 32px;

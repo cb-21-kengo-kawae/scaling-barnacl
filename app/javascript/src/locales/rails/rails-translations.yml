@@ -1,0 +1,820 @@
+---
+ja:
+  translation:
+    activerecord:
+      errors:
+        messages:
+          record_invalid: 'バリデーションに失敗しました: %{errors}'
+          restrict_dependent_destroy:
+            has_one: "%{record}が存在しているので削除できません"
+            has_many: "%{record}が存在しているので削除できません"
+    date:
+      abbr_day_names:
+      - 日
+      - 月
+      - 火
+      - 水
+      - 木
+      - 金
+      - 土
+      abbr_month_names:
+      -
+      - 1月
+      - 2月
+      - 3月
+      - 4月
+      - 5月
+      - 6月
+      - 7月
+      - 8月
+      - 9月
+      - 10月
+      - 11月
+      - 12月
+      day_names:
+      - 日曜日
+      - 月曜日
+      - 火曜日
+      - 水曜日
+      - 木曜日
+      - 金曜日
+      - 土曜日
+      formats:
+        default: "%Y/%m/%d"
+        long: "%Y年%m月%d日(%a)"
+        short: "%m/%d"
+        zelda_default: "%Y/%m/%d"
+      month_names:
+      -
+      - 1月
+      - 2月
+      - 3月
+      - 4月
+      - 5月
+      - 6月
+      - 7月
+      - 8月
+      - 9月
+      - 10月
+      - 11月
+      - 12月
+      order:
+      - :year
+      - :month
+      - :day
+    datetime:
+      distance_in_words:
+        about_x_hours:
+          one: 約1時間
+          other: 約%{count}時間
+        about_x_months:
+          one: 約1ヶ月
+          other: 約%{count}ヶ月
+        about_x_years:
+          one: 約1年
+          other: 約%{count}年
+        almost_x_years:
+          one: 1年弱
+          other: "%{count}年弱"
+        half_a_minute: 30秒前後
+        less_than_x_seconds:
+          one: 1秒以内
+          other: "%{count}秒未満"
+        less_than_x_minutes:
+          one: 1分以内
+          other: "%{count}分未満"
+        over_x_years:
+          one: 1年以上
+          other: "%{count}年以上"
+        x_seconds:
+          one: 1秒
+          other: "%{count}秒"
+        x_minutes:
+          one: 1分
+          other: "%{count}分"
+        x_days:
+          one: 1日
+          other: "%{count}日"
+        x_months:
+          one: 1ヶ月
+          other: "%{count}ヶ月"
+        x_years:
+          one: 1年
+          other: "%{count}年"
+      prompts:
+        second: 秒
+        minute: 分
+        hour: 時
+        day: 日
+        month: 月
+        year: 年
+    errors:
+      format: "%{attribute}%{message}"
+      messages:
+        accepted: を受諾してください
+        blank: を入力してください
+        confirmation: と%{attribute}の入力が一致しません
+        empty: を入力してください
+        equal_to: は%{count}にしてください
+        even: は偶数にしてください
+        exclusion: は予約されています
+        greater_than: は%{count}より大きい値にしてください
+        greater_than_or_equal_to: は%{count}以上の値にしてください
+        inclusion: は一覧にありません
+        invalid: は不正な値です
+        less_than: は%{count}より小さい値にしてください
+        less_than_or_equal_to: は%{count}以下の値にしてください
+        model_invalid: 'バリデーションに失敗しました: %{errors}'
+        not_a_number: は数値で入力してください
+        not_an_integer: は整数で入力してください
+        odd: は奇数にしてください
+        other_than: は%{count}以外の値にしてください
+        present: は入力しないでください
+        required: を入力してください
+        taken: はすでに存在します
+        too_long: は%{count}文字以内で入力してください
+        too_short: は%{count}文字以上で入力してください
+        wrong_length: は%{count}文字で入力してください
+      template:
+        body: 次の項目を確認してください
+        header:
+          one: "%{model}にエラーが発生しました"
+          other: "%{model}に%{count}個のエラーが発生しました"
+    helpers:
+      select:
+        prompt: 選択してください
+      submit:
+        create: 登録する
+        submit: 保存する
+        update: 更新する
+    support:
+      array:
+        last_word_connector: "、"
+        two_words_connector: "、"
+        words_connector: "、"
+    time:
+      am: 午前
+      formats:
+        default: "%Y年%m月%d日(%a) %H時%M分%S秒 %z"
+        long: "%Y/%m/%d %H:%M"
+        short: "%m/%d %H:%M"
+        zelda_default: "%Y/%m/%d %H:%M"
+      pm: 午後
+    brand: b→dash
+    copyright_html: "&copy; From Scratch Inc. 2016"
+    language:
+      ja: 日本語
+      en: English
+      switch: 言語切り替え
+    menu:
+      home: ホーム
+      platform:
+        target: ターゲット
+        view: ビュー変更
+        account: アカウント設定
+        data: データ管理
+        setting: 設定
+        ads: 広告DMP連携
+      marketing:
+        label: マーケティング
+        campaign: キャンペーン
+        scenario: シナリオ
+      sfa:
+        label: セールス
+        project: 案件管理
+        company: 企業管理
+        merchandise: 商材管理
+        sales_representative: 営業管理
+        business_file: ビジネスファイル管理
+        lead: 顧客
+      config:
+        profile: プロフィール
+        switch_data_views: データビュー切替え
+        sign_out: ログアウト
+      contact:
+        label: お問い合わせ
+      action:
+        label: アクション
+      push_notification:
+        label: プッシュ通知
+      line:
+        label: LINE
+      sms:
+        label: SMS
+      customer:
+        label: オーディエンス
+      collaboration:
+        label: ダッシュボード
+      analyses:
+        label: 分析
+      recommendation:
+        label: レコメンド
+      clerk:
+        label: Webテスト
+      receptions:
+        label: Web接客
+      mobile_receptions:
+        label: アプリ接客
+      contents:
+        label: コンテンツ
+        sites: サイト管理
+        themes: テーマ管理
+        creatives: イメージ管理
+        form_respondents: レポート
+      preparation:
+        label: データパレット
+      billing:
+        label: 契約/利用状況
+      support:
+        label: サポート
+      scoring:
+        label: スコアリング
+    policy_control:
+      has_no_policy: 権限がありません
+      has_no_contract: 契約対象外のアプリケーションです
+    app_launcher:
+      no_replay: ログイン後にランチャーを表示しない
+      create_shortcut: ショートカットを作る
+    sidebar:
+      settings:
+        account:
+          label: アカウント設定
+          contract: アカウント管理
+          logging: Webサイト計測タグ
+          user: ユーザー
+          ad_agencies:
+            label: 広告代理店
+            index: 広告代理店一覧
+          role: 権限
+          data_view: データビュー
+          tracking_info: トラッキング情報
+          domain: クロスドメイン設定
+          sdk_measurement_sets: アプリ計測設定
+          short_url:
+            label: 短縮URL
+            short_url_setting: 短縮URL一覧
+          aws_settings:
+            label: AWS設定
+            aws_accounts: AWSアカウント設定
+            aws_iams: AWS IAM設定
+        external_service:
+          label: 外部連携
+          sftp_key: SFTP鍵設定
+          api_setting: API接続設定
+          ad_vendors: 広告DMP連携設定
+          google_ad_accounts: Google広告アカウント連携設定
+        measurement_url:
+          label: 計測URL設定
+          ads: 広告URL設定
+        data_view:
+          label: データビュー
+          information: データビュー情報
+          logging: ログ計測設定
+          available_data: データ設定
+          user: ユーザー設定
+          web_log_filter: ログフィルタ設定
+          excluded_ip_address: 計測除外IPアドレス設定
+          export: データエクスポート
+          external_table_relations: リレーション設定
+          idmappings: Web・モバイルデータ連携
+          idmappings_sub: Web・モバイルデータ連携設定
+          permitted_ip_addresses: アクセス許可IPアドレス設定
+        goals:
+          label: コンバージョン設定
+        analyse:
+          label: 分析
+          column: 表項目設定
+          pattern: データパターン設定
+          culc: 計算指標設定
+          collection: 集計指標設定
+          delivery: レポート配信設定
+        action:
+          label: アクション
+          mail: メール
+          mail_setting: メール設定
+          mail_restriction: メール配信制御設定
+          mail_unsubscribe: 配信停止メールアドレス設定
+          push: プッシュ通知
+          push_client: プッシュ通知連携設定
+          push_send_options: プッシュ通知配信制御設定
+          line: LINE
+          line_channels: LINE設定
+          line_send_options: LINE配信制御設定
+          sms: SMS
+          sms_setting: SMS設定
+          win_push_client: windowsプッシュ通知連携設定
+          win_push_send_options: windowsプッシュ通知配信制御
+          yappli_linkage_setting: Yappli設定
+          yappli_send_options: Yappli連携制御設定
+        contents:
+          label: コンテンツ
+          senders: 自動返信メール送信元設定
+          recipients: 管理者通知メール送信先設定
+          csr: CSR・秘密鍵生成
+        recommendation:
+          label: レコメンド
+          data_set_setting: レコメンドデータセット設定
+        clerk:
+          label: Webテスト
+          tag_setting: Webテストタグ
+        receptions:
+          label: Web接客
+          tag_setting: Web接客タグ
+        customer:
+          label: 顧客
+          suspend: 配信停止ユーザー設定
+        audience:
+          label: オーディエンス
+          scoring_behavior_master: スコアリング行動マスタ設定
+        other:
+          label: その他
+    admin:
+      menu:
+        applications:
+          label: OAuthアプリケーション管理
+          admins: Adminアプリケーション
+          users: アプリケーション
+        services:
+          label: 各サービス管理画面
+          admin: Admin
+          auth: Auth
+          platform: Platform
+          action: Action
+          contents: Contents
+          report: Report
+          recommend: Recommend
+          clerk: Clerk
+    components:
+      zelda_labeling:
+        placeholder: ラベル名を入力してください
+        tag_placeholder: ''
+        selected_label: ''
+        select_label: ''
+        deselect_label: ''
+    notifications:
+      empty: 通知メッセージはありません。
+      category:
+        my_report: マイレポート
+        segment: セグメント
+        data_management: データ管理
+        customer: 顧客データ
+        transaction: 履歴データ
+        order: 注文データ
+        data_integration: データ統合
+        crm: CRM
+      message:
+        my_report:
+          success: "%sの集計が完了しました。"
+          failure: "%sの集計が失敗しました。"
+        segment: セグメント%sの抽出が完了しました。
+        download:
+          success: "%sがダウンロードできます。"
+          failure: "%sのダウンロードファイルの作成が失敗しました。"
+        import:
+          success:
+            with_name: "%sのデータ自動取り込みが完了しました。"
+            without_name: データの自動取り込みが完了しました。
+          failure:
+            with_name: "%sのデータ自動取り込みが失敗しました。"
+            without_name: データ自動取り込みが失敗しました。
+        data_management:
+          search:
+            complete: "%sが完了しました。"
+        data_integration:
+          success: "%sの自動取り込みが完了しました。"
+          failure: "%sの自動取り込みに失敗しました。"
+        crm:
+          apply:
+            success: "%sの表示項目設定の反映が完了しました。"
+            failure: "%sの表示項目設定の反映が失敗しました。"
+          search:
+            complete: "%sが完了しました。"
+            timeout: "%sがタイムアウトしました。"
+en:
+  translation:
+    date:
+      formats:
+        default: "%Y-%m-%d"
+        short: "%b %d"
+        long: "%B %d, %Y"
+        zelda_default: "%Y/%m/%d"
+      day_names:
+      - Sunday
+      - Monday
+      - Tuesday
+      - Wednesday
+      - Thursday
+      - Friday
+      - Saturday
+      abbr_day_names:
+      - Sun
+      - Mon
+      - Tue
+      - Wed
+      - Thu
+      - Fri
+      - Sat
+      month_names:
+      -
+      - January
+      - February
+      - March
+      - April
+      - May
+      - June
+      - July
+      - August
+      - September
+      - October
+      - November
+      - December
+      abbr_month_names:
+      -
+      - Jan
+      - Feb
+      - Mar
+      - Apr
+      - May
+      - Jun
+      - Jul
+      - Aug
+      - Sep
+      - Oct
+      - Nov
+      - Dec
+      order:
+      - :year
+      - :month
+      - :day
+    time:
+      formats:
+        default: "%a, %d %b %Y %H:%M:%S %z"
+        short: "%d %b %H:%M"
+        long: "%B %d, %Y %H:%M"
+        us: "%m/%d/%Y %I:%M %p"
+        zelda_default: "%Y/%m/%d %H:%M"
+      am: am
+      pm: pm
+    support:
+      array:
+        words_connector: ", "
+        two_words_connector: " and "
+        last_word_connector: ", and "
+    errors:
+      format: "%{attribute} %{message}"
+      messages:
+        model_invalid: 'Validation failed: %{errors}'
+        inclusion: is not included in the list
+        exclusion: is reserved
+        invalid: is invalid
+        confirmation: doesn't match %{attribute}
+        accepted: must be accepted
+        empty: can't be empty
+        blank: can't be blank
+        present: must be blank
+        too_long:
+          one: is too long (maximum is 1 character)
+          other: is too long (maximum is %{count} characters)
+        too_short:
+          one: is too short (minimum is 1 character)
+          other: is too short (minimum is %{count} characters)
+        wrong_length:
+          one: is the wrong length (should be 1 character)
+          other: is the wrong length (should be %{count} characters)
+        not_a_number: is not a number
+        not_an_integer: must be an integer
+        greater_than: must be greater than %{count}
+        greater_than_or_equal_to: must be greater than or equal to %{count}
+        equal_to: must be equal to %{count}
+        less_than: must be less than %{count}
+        less_than_or_equal_to: must be less than or equal to %{count}
+        other_than: must be other than %{count}
+        odd: must be odd
+        even: must be even
+        required: must exist
+        taken: has already been taken
+      template:
+        body: 'There were problems with the following fields:'
+        header:
+          one: 1 error prohibited this %{model} from being saved
+          other: "%{count} errors prohibited this %{model} from being saved"
+      unavailable_session: |
+        Session %{id} is no longer available in memory.
+
+        If you happen to run on a multi-process server (like Unicorn or Puma) the process
+        this request hit doesn't store %{id} in memory. Consider turning the number of
+        processes/workers to one (1) or using a different server in development.
+      unacceptable_request: 'A supported version is expected in the Accept header.'
+      connection_refused: |
+        Oops! Failed to connect to the Web Console middleware.
+        Please make sure a rails development server is running.
+    activerecord:
+      errors:
+        messages:
+          record_invalid: 'Validation failed: %{errors}'
+          restrict_dependent_destroy:
+            has_one: Cannot delete record because a dependent %{record} exists
+            has_many: Cannot delete record because dependent %{record} exist
+    datetime:
+      distance_in_words:
+        half_a_minute: half a minute
+        less_than_x_seconds:
+          one: less than 1 second
+          other: less than %{count} seconds
+        x_seconds:
+          one: 1 second
+          other: "%{count} seconds"
+        less_than_x_minutes:
+          one: less than a minute
+          other: less than %{count} minutes
+        x_minutes:
+          one: 1 minute
+          other: "%{count} minutes"
+        about_x_hours:
+          one: about 1 hour
+          other: about %{count} hours
+        x_days:
+          one: 1 day
+          other: "%{count} days"
+        about_x_months:
+          one: about 1 month
+          other: about %{count} months
+        x_months:
+          one: 1 month
+          other: "%{count} months"
+        about_x_years:
+          one: about 1 year
+          other: about %{count} years
+        over_x_years:
+          one: over 1 year
+          other: over %{count} years
+        almost_x_years:
+          one: almost 1 year
+          other: almost %{count} years
+        x_years:
+          one: 1 year
+          other: "%{count} years"
+      prompts:
+        year: Year
+        month: Month
+        day: Day
+        hour: Hour
+        minute: Minute
+        second: Second
+    helpers:
+      select:
+        prompt: Please select
+      submit:
+        create: Create %{model}
+        update: Update %{model}
+        submit: Save %{model}
+      page_entries_info:
+        entry:
+          zero: entries
+          one: entry
+          other: entries
+        one_page:
+          display_entries:
+            zero: No %{entry_name} found
+            one: Displaying <b>1</b> %{entry_name}
+            other: Displaying <b>all %{count}</b> %{entry_name}
+        more_pages:
+          display_entries: Displaying %{entry_name} <b>%{first}&nbsp;-&nbsp;%{last}</b>
+            of <b>%{total}</b> in total
+    views:
+      pagination:
+        first: "&laquo; First"
+        last: Last &raquo;
+        previous: "&lsaquo; Prev"
+        next: Next &rsaquo;
+        truncate: "&hellip;"
+    brand: b→dash
+    copyright_html: "&copy; From Scratch Inc. 2016"
+    language:
+      ja: 日本語
+      en: English
+      switch: Switch language
+    menu:
+      home: Home
+      platform:
+        target: Target
+        view: Change View
+        account: Account Setting
+        data: Data Management
+        setting: Settings
+        ads: Ads/DMP
+      marketing:
+        label: Marketing
+        campaign: Campaign
+        scenario: Scenario
+      sfa:
+        label: Sales
+        project: Product
+        company: Company
+        merchandise: Merchandise
+        sales_representative: Sales Representative
+        business_file: Bisiness File
+        lead: Customer
+      config:
+        profile: Profile
+        switch_data_views: Switch Data Views
+        sign_out: Log out
+      contact:
+        label: Contact
+      action:
+        label: Action
+      push_notification:
+        label: Push Notification
+      line:
+        label: LINE
+      sms:
+        label: SMS
+      customer:
+        label: Audiences
+      collaboration:
+        label: Dashboard
+      analyses:
+        label: Analyses
+      recommendation:
+        label: Recommendation
+      clerk:
+        label: Web Test
+      receptions:
+        label: Web Receptions
+      mobile_receptions:
+        label: Mobile Receptions
+      contents:
+        label: Contents
+        sites: Sites
+        themes: Themes
+        creatives: Creatives
+        form_respondents: Report
+      preparation:
+        label: Data Pallete
+      billing:
+        label: Status
+      support:
+        label: Support
+      scoring:
+        label: Scoring
+    policy_control:
+      has_no_policy: Has no policy
+      has_no_contract: Has no contract
+    app_launcher:
+      no_replay: I want to hide this launcher at logged in.
+      create_shortcut: Create this shortcut.
+    sidebar:
+      settings:
+        account:
+          label: Account Setting
+          contract: Contract Information
+          logging: Account Logging Setting
+          user: Users
+          ad_agencies:
+            label: Ad Agencies
+            index: Overview
+          role: Role
+          data_view: Data Views
+          tracking_info: Tracking Information
+          domain: Cross-domain Setting
+          sdk_measurement_sets: App Measurement Sets
+          short_url:
+            label: Short URL
+            short_url_setting: Short URL Setting
+          aws_settings:
+            label: AWS setting
+            aws_accounts: AWS account setting
+            aws_iams: AWS IAM setting
+        external_service:
+          label: External Services
+          sftp_key: SFTP-key Setting
+          api_setting: API Connection Setting
+          ad_vendors: Ads/DMP Vendors Setting
+          google_ad_accounts: Google Ad Accounts Setting
+        measurement_url:
+          label: Tracking URL Setting
+          ads: Advertisement URL Setting
+        data_view:
+          label: Data View Setting
+          information: Information
+          logging: Logging Setting
+          available_data: Data Setting
+          user: Users
+          web_log_filter: Web Log Filter Setting
+          excluded_ip_address: Excluded IP Address Setting
+          export: Data Export
+          external_table_relations: Relation Setting
+          idmappings: Web Mobile Relation
+          idmappings_sub: Web Mobile Relation Setting
+          permitted_ip_addresses: Permitted Ip Addresses Setting
+        goals:
+          label: Goals
+        analyse:
+          label: Analyse
+          column: Report Columns
+          pattern: Data Pattern Setting
+          culc: Culculation Index Setting
+          collection: Collection Index Setting
+          delivery: Report Delivery
+        action:
+          label: Action
+          mail: E-Mail
+          mail_setting: E-Mail Setting
+          mail_restriction: Delivery Restriction Setting
+          mail_unsubscribe: Unsubscribe Mail Address Setting
+          push: Push Notification
+          push_client: Push Client Setting
+          push_send_options: Delivery Restriction Setting
+          line: LINE Setting
+          line_channels: LINE Channel Setting
+          line_send_options: Delivery Restriction Setting
+          sms: SMS
+          sms_setting: SMS Setting
+          win_push_client: Windows Push Client Setting
+          win_push_send_options: Delivery Restriction Setting
+          yappli_linkage_setting: Yappli Linkage Setting
+          yappli_send_options: Delivery Restriction Setting
+        contents:
+          label: Contents Management
+          senders: Sender Of Automatic Reply Email Setting
+          recipients: Notice Of Administrator Email Setting
+          csr: Create CSR And Secret Key
+        recommendation:
+          label: Recommendation
+          data_set_setting: Recommend Data Set Setting
+        clerk:
+          label: Web Test
+          tag_setting: Web Test Tag
+        receptions:
+          label: Web Receptions
+          tag_setting: Web Receptions Tag
+        customer:
+          label: Customer
+          suspend: Distribution Cancell
+        audience:
+          label: Audience
+          scoring_behavior_master: Scoring Behavior Master Setting
+        other:
+          label: Other
+    admin:
+      menu:
+        applications:
+          label: OAuth Application Settings
+          admins: Admins
+          users: Users
+        services:
+          label: Services
+          admin: Admin
+          auth: Auth
+          platform: Platform
+          action: Action
+          contents: Contents
+          report: Report
+          recommend: Recommend
+          clerk: Clerk
+    components:
+      zelda_labeling:
+        placeholder: Please enter the name of the label
+        tag_placeholder: ''
+        selected_label: ''
+        select_label: ''
+        deselect_label: ''
+    notifications:
+      empty: There is no notification message.
+      category:
+        my_report: MY REPORT
+        segment: SEGMANT
+        data_management: DATA MANAGEMENT
+        customer: CUSTOMER DATA
+        transaction: TRANSACTION DATA
+        order: ORDER DATA
+        data_integration: DATA INTEGRATION
+        crm: CRM
+      message:
+        my_report:
+          success: Totalization of the %s is completed.
+          failure: Totalization of the %s is failed.
+        segment: Extraction of segment %s is completed.
+        download:
+          success: "%s can be downloaded."
+          failure: "%s could not make download file."
+        import:
+          success:
+            with_name: Importing data of %s is completed.
+            without_name: Importing data is completed.
+          failure:
+            with_name: Importing data of %s is failed.
+            without_name: Importing data is failed.
+        data_management:
+          search:
+            complete: "%s is completed."
+        data_integration:
+          success: Importing data of %s is completed.
+          failure: Importing data of %s is failed.
+        crm:
+          apply:
+            success: Applying display item setting of %s is completed.
+            failure: Applying display item setting of %s is failed.
+          search:
+            complete: "%s is completed."
+            timeout: "%s is timed out."

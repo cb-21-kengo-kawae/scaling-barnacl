@@ -1,0 +1,28 @@
+- unless content_for?(:global_menu)
+
+doctype html
+html
+  head
+    meta http-equiv="content-language" content=I18n.locale
+    - if Rails.env.staging? || Rails.env.production?
+      = render 'ga/ga'
+    script(
+      name="config"
+      data-operator=operator.to_json
+      data-namespace="app"
+      data-env=Rails.env
+      data-short-env=Rails.configuration.short_env
+      data-service=Settings.service_name
+      data-version=Settings.version_id
+      data-locale=I18n.locale
+    )
+    title= local_assigns[:title] || t('brand')
+    = favicon_link_tag
+    = csrf_meta_tags
+    = stylesheet_pack_tag 'application'
+    = javascript_include_tag 'vue_application'
+  body
+    - if Rails.env.staging? || Rails.env.production?
+      = render 'ga/ga_tag_manager'
+    #app
+    = javascript_pack_tag 'application'

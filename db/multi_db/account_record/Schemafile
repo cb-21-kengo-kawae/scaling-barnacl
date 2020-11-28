@@ -1,0 +1,9 @@
+create_table "role_policies", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4", comment: "ロールポリシー" do |t|
+  t.integer  "role_id",      null: false, unsigned: true,                                   comment: "role_id"
+  t.integer  "policy_id",    null: false, unsigned: true,                                   comment: "policy_id"
+  t.integer  "policy_level", null: false,                                                   comment: "レベル(1:nothing, 2:read_only, 3:edit)"
+  t.datetime "created_at",   null: false
+  t.datetime "updated_at",   null: false
+  t.index ["policy_id"], name: "index_role_policies_references_on_policy_id", using: :btree
+  t.index ["role_id"], name: "index_role_policies_references_on_role_id", using: :btree
+end

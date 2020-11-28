@@ -1,0 +1,30 @@
+.preview{
+	background:#fff;
+	box-shadow: -4px 0px 2px 0px rgba(0,0,0,.12);
+	position:absolute;
+	top:0;
+	bottom:0;
+	right:-400px;
+	width:400px;
+	z-index:10;
+	-webkit-transition: right $speed-high ease;
+	   -moz-transition: right $speed-high ease;
+	    -ms-transition: right $speed-high ease;
+	     -o-transition: right $speed-high ease;
+	        transition: right $speed-high ease;
+	&.preview-show{
+		right:0;
+	}
+	.preview-header{
+		padding:$spacer2;
+		font-weight: bold;
+		border-bottom: solid 1px $border-color;
+	}
+	.preview-main{
+		position:absolute;
+		top:4.3rem;
+		bottom:0;
+		padding:$spacer3 $spacer2;
+		overflow-y: auto;
+	}
+}

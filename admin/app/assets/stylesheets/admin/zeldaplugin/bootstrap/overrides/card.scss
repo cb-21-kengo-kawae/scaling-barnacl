@@ -1,0 +1,144 @@
+.card{
+    box-shadow: 0px 2px 4px 1px $shadow-color;
+    margin-bottom:0;
+    border-radius:$border-radius-lg;
+    overflow:hidden;
+    border: none;
+    .card-title-main{
+        font-weight: bold;
+        text-align: center;
+        padding:$spacer2;
+        background:$gray-light;
+    }
+    .card-title{
+        padding:1rem 1.6rem;
+        border-bottom:1px solid $border-color;
+        margin-bottom: 0;
+        position:relative;
+        font-weight: bold;
+        .btn-group{
+            position:absolute;
+            right:1.6rem;
+            top:.4rem;
+        }
+    }
+    .card-header{
+      font-size: $font-size-sm;
+      font-weight: bold;
+      padding: 10px $spacer3;
+      position: relative;
+      line-height: 1.2;
+      .card-header-btn{
+        margin: -.6em 0;
+      }
+    }
+    &.card-todo{
+        position:relative;
+        .todo-icon{
+            width: 40px;
+            text-align: center;
+            line-height:40px;
+            border-radius: 50%;
+            color:#fff;
+            font-size: $font-size-lg;
+            display: inline-block;
+            &.todo-appoint{
+                background: $brand-danger;
+            }
+            &.todo-call{
+                background: $brand-success;
+            }
+            &.todo-mail{
+                background: $brand-warning;
+            }
+            &.todo-else{
+                background: $gray;
+            }
+        }
+        .todo-title{
+            margin-bottom: .5rem;
+        }
+        .todo-info{
+            width: calc(100% - 1.8rem - 3rem);
+        }
+        .card-control-btn{
+            position:absolute;
+            right:1.6rem;
+            top:2.1rem;
+            display: none;
+        }
+    }
+    &.card-index{
+        .index-val{
+            font-size: 2rem;
+            text-align: center;
+            position:relative;
+            hr{
+                width: 90%;
+                border-top:solid 2px $border-color;
+            }
+            .highcharts-title{
+                font-size: 3rem!important;
+                top:50%!important;
+                margin-top: -1.8rem!important;
+            }
+        }
+    }
+    .card-content{
+      height: calc(100% - 39px);
+      .card-content-header{
+        padding:$spacer2 $spacer3;
+        text-align: right;
+        border-bottom:solid 1px $border-color;
+        &+.card-content-wrap{
+          height: calc(100% - 40px);
+          overflow-y: auto;
+        }
+      }
+    }
+    .form-inline{
+        &+.card-content{
+            height: calc(100% - 79px);
+        }
+    }
+    .card-block{
+        padding: 2.4rem 1.6rem;
+        position:relative;
+        &:hover{
+            .card-control-btn{
+                display: block;
+            }
+        }
+    }
+    .card-toggle-btn{
+        position: absolute;
+        bottom:.5rem;
+        left:0;
+        right:0;
+        text-align: center;
+    }
+    .card-hidden-wrap{
+        display: none;
+        font-size: $font-size-xs;
+        padding-top:2.4rem;
+        margin-top:2.4rem;
+    }
+
+    &.card-table{
+      .card-content{
+        overflow: hidden!important;
+        .card-content-header{
+          &+.card-content-wrap{
+            height: calc(100% - 83px);
+          }
+        }
+      }
+      .card-content-wrap{
+        overflow-y:auto;
+      }
+      .card-table-footer{
+        padding: $spacer2;
+        border-top:solid 1px $border-color;
+      }
+    }
+}

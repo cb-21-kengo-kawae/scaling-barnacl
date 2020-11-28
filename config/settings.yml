@@ -1,0 +1,90 @@
+service_name: template4th
+version_id: <%= ENV['SHORTHASH'] || 'commit-hash' %>
+deploy_datetime: <%= ENV['DATETIME_JST'] || DateTime.now.strftime("%Y%m%d%H%M%s") %>
+
+public_url: 'http://web-server'
+private_url: 'http://web-server'
+
+# I18n サポート
+available_locales:
+  - ja
+  - en
+
+# Database
+db:
+  host: zelda-app-db
+  port: 3306
+  database: zelda_template4th_development
+  username: root
+  password: test
+
+# Redis
+redis:
+  session:
+    host: zelda-redis
+    port: 6379
+  cache:
+    host: zelda-redis
+    port: 6379
+  search:
+    host: zelda-redis
+    port: 6379
+
+# 各サービスの設定値
+services:
+  auth:
+    relative_url_root: '/auth'
+    api_version: 'authorized'
+    sign_in_path: '/auth/users/sign_in'
+  admin:
+    relative_url_root: '/admin'
+  platform:
+    relative_url_root: '/platform'
+  platform4th:
+    relative_url_root: '/platform4th'
+  template4th:
+    relative_url_root: '/template4th'
+
+# OAuthApplication defaults
+app:
+  after_unverified_request_path: '/template4th'
+  after_unverified_request_admin_path: '/admin/administrators/sign_in'
+
+# for donkey auth
+auth:
+  app_id: 'template4th_uid'
+  app_secret: 'template4th_secret'
+  app_redirect_uri: 'http://web-server/template4th/auth/callback'
+  app_scopes: 'pla_pri pla_pub rep_pri rep_pub sfa_pri sfa_pub cam_pri cam_pub cms_pri cms_pub userinfo'
+
+# OAuth admin
+admin:
+  auth:
+    app_id: 'template4th_admin_uid'
+    app_secret: 'template4th_admin_secret'
+    app_redirect_uri: 'http://web-server/template4th/admin/auth/callback'
+    app_scopes: 'admin'
+    public_url: 'http://web-server'
+    private_url: 'http://web-server'
+
+lograge:
+  enable: true
+sentry:
+  dsn: ''
+
+# AWS 全般に関わる
+aws:
+  default_region: 'us-west-2'
+
+# SQS
+sqs:
+  queue_name:
+    external_table: 'dev-external-data'
+    activity_processor: 'dev-activity-processor'
+    activity_processor_sdk: 'dev-activity-processorsdk'
+    report: 'dev-report'
+
+# S3
+s3:
+  endpoint: 'https://s3-us-west-2.amazonaws.com'
+  bucket_name:

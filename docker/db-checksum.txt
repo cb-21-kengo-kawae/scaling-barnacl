@@ -1,0 +1,1 @@
+MD5 (docker/db-backups/db-all.sql) = 28d46de4903cab3a211f7fb78ecdbf09

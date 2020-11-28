@@ -1,0 +1,45 @@
+.datepicker{
+	z-index:999;
+	td,th{
+		width: auto!important;
+		min-width: auto!important;
+	}
+	thead{
+		th{
+			padding:$spacer1;
+		}
+	}
+	.timepicker-picker{
+		tbody{
+			td{
+				padding:$spacer1!important;
+			}
+		}
+	}
+	.day{
+		padding:$spacer1!important;
+		&.active{
+			background:$brand-primary;
+			border-radius: $border-radius;
+			&:hover{
+				background:$brand-primary-dark!important;
+			}
+		}
+		&.today{
+			&:before{
+				display: none;
+			}
+		}
+		&.old,&.new{
+			color:$gray;
+			opacity:.4;
+		}
+		&.disabled{
+      background: $gray-light;
+      border-radius: 0;
+		}
+		&:hover{
+			background:$brand-primary-light!important;
+		}
+	}
+}

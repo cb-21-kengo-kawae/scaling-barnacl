@@ -1,0 +1,14 @@
+db:
+  host: zelda-app-db
+  password: test
+
+# Push通知はアプリケーションを持たないため
+# Adminで直接接続確認を行う
+mobile_db:
+  password: test
+
+common_db:
+  password: test
+
+public_url: "http://localhost"
+private_url: "http://web-server"

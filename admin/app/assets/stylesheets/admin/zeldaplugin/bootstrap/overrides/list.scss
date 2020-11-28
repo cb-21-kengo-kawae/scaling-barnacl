@@ -1,0 +1,134 @@
+.list{
+  &.list-sm{
+    .list-item{
+      padding: $spacer2;
+    }
+  }
+  .list-item{
+    padding: $spacer3;
+    background: #fff;
+    position: relative;
+    .list-item-btn{
+      position: absolute;
+      right: $spacer2;
+      top:50%;
+      margin-top: -1em;
+    }
+    &.active{
+      background-color: $table-bg-hover;
+    }
+    &.disabled{
+      background: $gray-light;
+      color: $gray;
+      &:hover{
+        background: $gray-light!important;
+        color: inherit!important;
+      }
+    }
+  }
+  &.list-striped{
+    .list-item:nth-of-type(odd){
+      background-color: $table-bg-accent;
+    }
+  }
+  &.list-hover{
+    .list-item:hover{
+      background-color: $table-bg-hover;
+    }
+  }
+  &.list-draggable{
+    li{
+      background: image-url('zeldaplugin/draggable_row.svg') no-repeat left 7px center;
+      padding-left: $spacer4;
+    }
+  }
+  &.list-bordered{
+    .list-item{
+      border-top: $table-border-width solid $table-border-color;
+      &:first-child{
+        border-top:none;
+      }
+    }
+  }
+  &.list-inverse{
+    background: $brand-primary-light;
+    color: $gray;
+    .list-item{
+      &:hover{
+        color: $brand-primary;
+      }
+      &.active{
+        background-color: $brand-primary;
+        color: #fff;
+      }
+    }
+  }
+}
+.list-header{
+  background: $gray-lighter;
+  color: $gray;
+  font-weight: bold;
+}
+.list-mb2{
+  &>*{
+    margin-bottom: $spacer2;
+    display: block;
+    &:last-child{
+      margin-bottom: 0;
+    }
+  }
+}
+.list-mb3{
+  &>*{
+    margin-bottom: $spacer3;
+    display: block;
+    &:last-child{
+      margin-bottom: 0;
+    }
+  }
+}
+/* ------------------------------------
+モーダル カードリスト
+------------------------------------ */
+.modal{
+  .list-card{
+    box-shadow: 0px 2px 3px 1px $shadow-color;
+    .list-item{
+      padding: 0;
+      box-shadow: 0px 2px 5px 1px rgba(0,0,0,0);
+        -webkit-transition: all $speed-high ease;
+           -moz-transition: all $speed-high ease;
+          -ms-transition: all $speed-high ease;
+           -o-transition: all $speed-high ease;
+            transition: all $speed-high ease;
+      label{
+        padding: $spacer3;
+        cursor: pointer;
+      }
+      &:hover{
+        transform: scale(1.02,1.02);
+        box-shadow: 0px 2px 5px 1px $shadow-color;
+        margin: 4px 0;
+        &+.list-item{
+          border:none;
+        }
+      }
+      .list-item{
+        padding: $spacer3;
+        box-shadow: none;
+        label{
+          padding: auto;
+          cursor: pointer;
+        }
+        &:hover{
+          transform: none;
+          box-shadow: none;
+          margin: 0;
+          &+.list-item{
+            border-top:solid 1px $border-color;
+          }
+        }
+      }
+    }
+  }
+}

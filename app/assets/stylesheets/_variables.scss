@@ -1,0 +1,447 @@
+/* ------------------------------------
+breakpoint
+------------------------------------ */
+/* stylelint-disable */
+$grid-breakpoints: (
+  xs: 0,
+  sm: 10px,
+  md: 768px,
+  lg: 992px,
+  xl: 1200px
+);
+/* stylelint-enable */
+
+/* ------------------------------------
+color
+------------------------------------ */
+$brand-primary: #48ccff;
+$brand-primary-second: #5ec7eb;
+$brand-primary-second-light: #a4d9eb;
+$brand-primary-light: #e2eff9;
+$brand-primary-lighter: #cee6f9;
+$brand-primary-third: #77d9ff;
+$brand-primary-third-light:#99e2ff;
+$brand-primary-dark: #0070a5;
+$brand-primary-darker: #004e72;
+
+$brand-success: #2bbe8f;
+$brand-success-light: #b4fbe4;
+$brand-success-second: #4bc689;
+$brand-info: #00b0ea;
+$brand-warning: #ffd55f;
+$brand-warning-dark: #b38f2e;
+$brand-warning-light: #fff5d9;
+$brand-warning-lighter: #fff7df;
+$brand-danger: #f27d79;
+$brand-danger-dark: #b34b47;
+$brand-danger-light: #ffeae8;
+$brand-danger-lighter: #fee; // 安部さんレビュー用
+
+$color-primary-dark: $brand-primary-dark;
+$color-primary-darkest: $brand-primary-darker;
+$brand-validation: #fee;
+$brand-validation-dark: #f27d79;
+
+$brand-status-complete: #c7efff;
+
+$black: #000;
+
+$gray-darker: #333;
+$gray-dark: #666;
+$gray: #808080;
+$gray-light: #9b9b9b;
+$gray-lighter: #f4f4f4;
+$gray-lighter-2: #e0e0e0;
+$gray-ace: #93a1a1;
+
+$white: #fff;
+$white-gray: #efefef;
+
+$secondary: #ccd5d9;
+$secondary-dark: #7698a2;
+$secondary-light: #dee5e8;
+$secondary-lighter: #ebf0f2;
+
+$color-red: #d35;
+$color-trigger: #f98181;
+$color-action: #ffb839;
+$color-filter: #5fa9e4;
+$color-branch: #10b085;
+$shadow-color: rgba(105, 105, 105, 0.3);
+$shadow-color-dark: rgba(0, 0, 0, 0.3);
+$shadow-color-white: rgba(255, 255, 255, 0.8);
+$shadow-color-light: rgba(0, 0, 0, 0.16);
+$shadow-color-dark-blue-magenta: rgba(0, 0, 0, 0.2);
+$input-shadow: 0 0.1vw 0.75vw -0.25vw rgba(0, 0, 0, 0.3);
+$input-shadow-white: 0 0 0.8vw -0.2vw $white;
+$input-shadow-light: 0 0 1.2vw $shadow-color-light;
+$input-shadow-light-s: 0 0 1vw $shadow-color-light;
+$input-shadow-light-xs: 0 0 0.3vw $shadow-color-light;
+$table-shadow-tr: 0 0 0.3vw -0.08vw rgba(0, 0, 0, 0.3);
+$table-shadow-tr-s: 0 0 0.2vw -0.06vw rgba(0, 0, 0, 0.3);
+/* stylelint-disable-next-line */
+$text-editor-shadow: 0 0 2px 0 rgba(0, 0, 0, 0.3);
+$text-editor-shadow-light: 0 0.1vw 0.4vw -0.05vw $shadow-color-light;
+/* stylelint-disable-next-line */
+$frame-shadow: 0 0 10px $shadow-color-dark-blue-magenta;
+$hamburger-shadow: 0 0.1vw 0.3vw 0 $shadow-color;
+$dd-item-shadow: 0 0.1vw 0.2vw 0 #6969694d;
+
+$readonly-bg-color: #efefef; //TODO:色の検討
+
+$first-bg-color: #d1e2f1;
+$second-bg-color: #fdf2d0;
+$second-bg-color-2: #fdf8e7;
+$third-bg-color: #edf0d8;
+$third-bg-color-2:#f7f7eb;
+$fourth-bg-color: #ffdedb;
+$fourth-bg-color-2:#fededb;
+$fifth-bg-color:#fededb;
+$fifth-bg-color-2:#faf2fd;
+
+$item-color-1: $fourth-bg-color;
+$item-color-2: #ffe9d7;
+$item-color-3: $second-bg-color;
+$item-color-4: $third-bg-color;
+$item-color-5: $brand-primary-light;
+$item-color-6: $gray-lighter;
+
+$color-star-selected: #ffca00;
+$color-star: $gray-light;
+
+$color-invalid: #8f8f8f;
+$color-invalid-light: #dadada;
+
+$table-show-header: #e3e3e3; //TODO:色の検討
+$table-show-header-primary: #d4d4d4; //TODO:色の検討
+
+$checked-line-color: #d2effb;
+$selected-color: $brand-primary-light; //TODO: 色の検討
+$selected-border-color: #d2effb; //分ける意味あるのか
+$selected-card-color: #b1e8ff;
+
+$card-hover-color: $brand-primary-light;
+$table-hover-color: $brand-primary-light;
+$table-hover-color-tr: #f0f7fc; // TODO: 色未確定...?
+$table-font-color-tr: #484848;
+
+$list_color_01: #3098f2;
+$list_color_02: #fcbd00;
+$list_color_03: #b1cc00;
+$list_color_04: #ffa097;
+$list_color_05: #e6aeff;
+
+$list_color_03_little_light: #c5e016;
+$list_color_04_little_light: #ff8e8c;
+
+$list_color_01_light: #61aef2;
+$list_color_02_light: #fae196;
+$list_color_03_light: #d0dd82;
+$list_color_04_light: #ffd0cc;
+$list_color_05_light: #efccff;
+
+$list_color_01_lighter: #d1e2f1;
+$list_color_02_lighter: #fdf2d0;
+$list_color_03_lighter: #edf0d8;
+$list_color_04_lighter: #ffdedb;
+$list_color_05_lighter: #f7e6ff;
+$list_color_06_lighter: #fff0db;
+$list_color_07_lighter: #dbfff0;
+
+$color_order_01_light: #ffdedb;
+$color_order_02_light: #ffe9d6;
+$color_order_03_light: $list_color_02_lighter;
+$color_order_04_light: $list_color_03_lighter;
+$color_order_05_light: $brand-primary-light;
+
+$tab-color-1: $list_color_01_lighter;
+$tab-color-2: $list_color_02_lighter;
+$tab-color-3: $list_color_03_lighter;
+$tab-color-4: $list_color_04_lighter;
+$tab-color-5: $list_color_05_lighter;
+
+$file-color-normal: $list_color_01_lighter;
+$file-color-cleansing: $list_color_02_lighter;
+$file-color-join: $list_color_03_lighter;
+
+$color-block-selected: #00b0ea4d;
+
+$graph_color_01: #82c1f7;
+$graph_color_01_light: #abd5f9;
+$graph_color_02: #fdd04c;
+$graph_color_02_light: #fdde7f;
+$graph_color_02_lighter: #feebb2;
+
+$graph_color_black: #6969694d;
+
+$table-header-color: $brand-primary-light;
+$table-header-color2: #61aef2;
+$table-gray-color: #d1d1d1;
+$table-red-color: rgba($list_color_04_lighter, 0.6);
+
+$bd-content-variable-color: #72b5f1;
+
+$union-input-shadow-01: 0 0 0 0.2vw $brand-primary-lighter;
+$union-input-shadow-02: 0 0 0 0.2vw $list_color_02_lighter;
+$union-input-shadow-03: 0 0 0 0.2vw $list_color_03_lighter;
+$union-input-shadow-04: 0 0 0 0.2vw $list_color_04_lighter;
+
+$split-body-color-01: #edf5fb;
+$split-body-color-02: #fef8e7;
+$split-body-color-03: #f7f7eb;
+$split-body-color-04: #ffeeed;
+
+/* ------------------------------------
+daterangepicker
+------------------------------------ */
+$daterangepicker-active-bg-color: $brand-primary;
+$daterangepicker-cell-hover-bg-color: $brand-primary-light;
+$daterangepicker-in-range-bg-color: $brand-primary-light;
+$daterangepicker-ranges-bg-color: #fff;
+$daterangepicker-ranges-border-color: $brand-primary;
+$daterangepicker-control-disabled-color: $gray-lighter;
+
+/* ------------------------------------
+border
+------------------------------------ */
+$border-color: #d3e0e6;
+$border-color-dark: #a5b3b9;
+$border-color-icon-01: #ffe9d6;
+$pre-border-color: $gray;
+$input-border-color: #dfe1e5;
+$border-radius: 0.2vw;
+$border-radius-s: 0.3vw;
+$border-radius-lg: 0.4vw;
+$border-radius-08: 0.8vw;
+$border-radius-09: 0.9vw;
+$border-radius-xlg: 1vw;
+$border-radius-xhlg: 1.5vw;
+$border-radius-xxlg: 2vw;
+$border-radius-xxxlg: 2.5vw;
+$card-radius: $border-radius-xlg;
+
+$hamburger-border-up: 1.5vw 1.5vw 0.3vw 0.3vw;
+$hamburger-border-down: 0.3vw 0.3vw 1.5vw 1.5vw;
+$hamburger-border-up-s: 1vw 1vw 0.3vw 0.3vw;
+$hamburger-border-down-s: 0.3vw 0.3vw 1vw 1vw;
+$hamburger-border-up-xs: 0.8vw 0.8vw 0.3vw 0.3vw;
+$hamburger-border-down-xs: 0.3vw 0.3vw 0.8vw 0.8vw;
+
+$checked-line: 0.52vw;
+$btn-border-radius-m: 1.3vw;
+$border-width-m: 0.5vw;
+
+/* ------------------------------------
+layout
+------------------------------------ */
+/* stylelint-disable-next-line */
+$side-pane-width: 316px;
+
+/* ------------------------------------
+grid
+------------------------------------ */
+/* stylelint-disable-next-line */
+$grid-gutter-width-base: 16px;
+$grid-card-pink: #fff0f0;
+
+/* -----------
+font
+------------ */
+/* stylelint-disable-next-line */
+$font-size-root: 10px;
+$font-size-base: 1.3rem;
+$font-size-xxxl: 3vw; //iconとか
+$font-size-emp: 2.4vw; //強調文字
+$font-size-emp-m: 2.2vw; //強調文字の文字数多い版
+$font-size-emp-s: 2vw; //強調文字の文字数めっちゃ多い版
+$font-size-emp-ss: 1.6vw;
+$font-size-xxl9: 1.9vw; //main-desciption
+$font-size-xxl: 1.8vw; //main-desciption
+$font-size-xl: 1.6vw;
+$font-size-15: 1.5vw;
+$font-size-l: 1.4vw;
+$font-size-mm: 1.3vw;//マイページにおける時間単位（ｈ）の表示用
+$font-size-m: 1.2vw; //main-msg, 平文もこれでいいか？
+$font-size-ss: 1.1vw; //あまり使わない
+$font-size-s: 1vw; //小さい文字？
+$font-size-xs: 0.9vw; //カッコ内注釈
+$font-size-xxs: 1.1rem; //ヘッダー内
+$font-size-08: 0.8vw; //日付
+$font-size-xxxs: 0.7vw; //日付
+$font-size-xxxxs: 0.6vw;
+$font-size-08vh: 0.8vh;
+$font-size-12vh: 1.2vh;
+
+$font-weight-bold: 600;
+$font-weight-medium: 500;
+$font-weight-normal: 400;
+$font-area-title: 200;
+
+/* -----------
+space
+------------ */
+$spacer: 1rem;
+$spacer-x: $spacer;
+$spacer-y: $spacer;
+$spacer1: ($spacer * 0.4);
+$spacer2: ($spacer-x * 0.8);
+$spacer3: ($spacer-x * 1.6);
+$spacer4: ($spacer-x * 2.4);
+$spacer5: ($spacer-x * 3.2);
+$spacer-header-item: 0.4vw; //ヘッダーに要素が並ぶ時の余白(左右)
+//4.0
+$space: 1vw; //20px
+$space01: ($space * 0.1); //2px
+$space02: ($space * 0.2); //4px
+$space04: ($space * 0.4); //8px
+$space05: ($space * 0.5); //10px
+$space06: ($space * 0.6); //12px
+$space07: ($space * 0.7); //14px
+$space08: ($space * 0.8); //16px
+$space12: ($space * 1.2); //24px
+$space15: ($space * 1.5); //30px
+$space20: ($space * 2); //40px
+$space30: ($space * 3); //60px
+$space50: ($space * 5); //100px
+
+/* -----------
+form
+------------ */
+/* stylelint-disable */
+$form-control-size-xxs: 42px;
+$form-control-size-xs: 100px;
+$form-control-size-s: 150px;
+$form-control-size-m: 240px;
+$form-control-size-l: 320px;
+/* stylelint-enable */
+
+/* -----------
+table
+------------ */
+$table-tr-height: 2.2vw;
+$table-bg-accent: #fbfcfc;
+$table-bg-hover: #e2eff9;
+$table-cell-padding: 1.4rem;
+$table-border-color: #d3e0e6;
+$cl-table-bg-selected: rgba(128, 128, 128, 0.29);
+
+/* -----------
+button
+------------ */
+$btn-secondary-color: $secondary-dark;
+$btn-secondary-bg: $secondary-lighter;
+$btn-secondary-bg-hovered: $secondary-lighter;
+$btn-secondary-bg-pushed: $secondary-light;
+$btn-secondary-border: $secondary;
+$btn-normal-color: $secondary-dark;
+$btn-normal-bg: $secondary-lighter;
+$btn-normal-bg-hovered: $secondary-light;
+$btn-normal-bg-pushed: $secondary;
+/* stylelint-disable */
+$btn-radius: 10px;
+$btn-radius-s: 8px;
+$btn-radius-l: 13px;
+$btn-radius-ll: 20px;
+/* stylelint-enable */
+$btn-height-s: 2.2vw; //ボタン文字サイズがsの時の高さ
+$btn-height-m: 2.6vw; //ボタン文字サイズがmの時の高さ
+$btn-height-l: 2.7vw; //ボタン文字サイズがlの時の高さ
+$input-button-height: 2.6vw; //検索ボックスやセレクトボックスの縦幅(今後2.6vwに変更される)
+$checkbox-height: 1.3vw;
+$checkbox-height-s: 1vw;
+
+/* ------------------------------------
+tag
+------------------------------------ */
+$tag-font-size: $font-size-base;
+/* stylelint-disable */
+$tag-size-s: 44px;
+$tag-size-m: 68px;
+$tag-size-l: 80px;
+$tag-size-xl: 95px;
+/* stylelint-enable */
+
+/* ------------------------------------
+scrollbar
+------------------------------------ */
+$scrollbar-width: 0.45vw; //スクロールバーの横幅
+
+/* ------------------------------------
+animation
+------------------------------------ */
+$speed-high: 0.4s;
+$speed-normal: 0.6s;
+$speed-slow: 1s;
+$speed-slower: 1.4s;
+
+/* ------------------------------------
+alert
+------------------------------------ */
+$alert-danger-border: $brand-danger;
+$alert-warning-bg: $brand-warning;
+
+/* ------------------------------------
+layout
+------------------------------------ */
+$header-height: 2.5vw;
+$header-height-main: 2.5vw; //ヘッダーの高さ
+/* stylelint-disable-next-line */
+$header-nav-size: 40px;
+$tab-height: 2vw;
+
+/* ------------------------------
+mail_variables
+------------------------------ */
+$tab-height: 2vw !default;
+$white-gray: #efefef !default;
+$background-gray1: #ebf0f2 !default;
+$background-gray2: #808080 !default;
+$background-hover1: #e9c8c8 !default;
+$icon-gray: #b1b1b1 !default;
+$color-Tab1: #e9c8c8 !default;
+$color-Tab2: #fff2cc !default;
+$color-Tab3: #cfe1f3 !default;
+$color-gray1: #ebf0f2 !default;
+$color-gray2: #808080 !default;
+$banner-color-1: #f98181 !default;
+$storage-graph-h: 25vw !default; //内訳グラフheight
+$tab-color-1: $list_color_01_lighter !default;
+$tab-color-2: $list_color_02_lighter !default;
+$tab-color-3: $list_color_03_lighter !default;
+$tab-color-4: $list_color_04_lighter !default;
+$header-btn-size: calc(3.2rem + 1.3vw + 1.3vw + 1.2vw) !default;
+$sidebar-width: 8vw !default;
+/* stylelint-disable-next-line */
+$task-btn-size: 52px !default;
+$shadow: 0 0.1vw 0.6vw 0 rgba(105, 105, 105, 0.3) !default;
+/* stylelint-disable-next-line */
+$shadow-s: 0 2px 13px -2px rgba(105, 105, 105, 0.3) !default;
+$shadow-xs: 0 0.1vw 0.4vw -0.1vw rgba(105, 105, 105, 0.3) !default;
+$shadow-xxs: 0 0.1vw 0.1vw 0 rgba(0, 0, 0, 0.05), 0 0.05vw 0.25vw 0 rgba(0, 0, 0, 0.12), 0 0.15vw 0.05vw -0.1vw rgba(0, 0, 0, 0.1) !default;
+/* stylelint-disable-next-line */
+$shadow-header: 0 0 10px rgba(105, 105, 105, 0.3) !default;
+/* stylelint-disable-next-line */
+$shadow-inner: 0 0 2px #00000029 !default;
+$shadow-xs: 0 0.1vw 0.1vw 0 rgba(0, 0, 0, 0.05), 0 0.05vw 0.25vw 0 rgba(0, 0, 0, 0.12), 0 0.15vw 0.05vw -0.1vw rgba(0, 0, 0, 0.1) !default;
+$drop_shadow: 0 0.1vw 0.6vw rgba(105, 105, 105, 0.3) !default;
+$drop_shadow_xs: 0 0.1vw 0.4vw rgba(105, 105, 105, 0.3) !default;
+$time-item-shadow: #6969694c;
+$scenario-item-action-color: #ffd4d5 !default;
+$scenario-item-branch-color: #d9ead3 !default;
+$calendar-header-color: #a3d1ff !default;
+$flow-line-color: #cacaca !default;
+/* stylelint-disable-next-line */
+$number-input-shadow: 0 3px 6px #00000029 !default;
+
+/* ------------------------------------
+toggle
+------------------------------------ */
+$toggle-on-border-color: #5cc3e6;
+$toggle-off-border-color: #969696;
+$toggle-off-bg-color: #9a9a9a;
+
+/* ------------------------------------
+panel
+------------------------------------ */
+$panel-gray-light: rgba(236, 236, 236, 0.5);
+$panel-gray: rgba(236, 236, 236, 1);

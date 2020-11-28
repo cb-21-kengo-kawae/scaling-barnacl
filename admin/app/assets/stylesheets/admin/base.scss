@@ -1,0 +1,16 @@
+@import "variables";
+
+
+.right-help-panel {
+  height: calc(100vh - 64px);
+  background-color: rgba(116, 150, 157, 0.8);
+}
+
+[data-vue] {
+  opacity: 0;
+  transition: opacity 200ms ease-in-out;
+
+  &[data-initialized="true"] {
+    opacity: 1;
+  }
+}

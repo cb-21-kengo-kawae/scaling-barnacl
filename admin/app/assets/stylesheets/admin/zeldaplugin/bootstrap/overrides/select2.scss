@@ -1,0 +1,99 @@
+//ラベル入力
+.select2-container{
+  *:focus{
+    outline: none!important;
+  }
+  .select2-results__group{
+    background: $gray-light;
+  }
+  .select2-results__option{
+    .select2-option-ttl{
+      &+.select2-option-detail{
+        font-size: $font-size-xs;
+        margin-top: $spacer1;
+      }
+    }
+  }
+  .select2-results__option--highlighted[aria-selected]{
+    background: $brand-primary;
+  }
+  .select2-selection{
+    border-color:$input-border-color!important;
+    &.select2-selection--single{
+      background: #fff;
+      .select2-selection__rendered{
+        color: $gray-dark;
+        line-height: 2.6rem;
+        letter-spacing: 0;
+        padding: 0 1rem 0 0.75rem;
+        .select2-option-detail{
+          display: none;
+        }
+      }
+    }
+    &.select2-selection--multiple{
+      //ラベル入力
+      min-height: auto;
+      .select2-selection__choice{
+        margin:2.5px $spacer1 2.5px 0;
+        background: $gray;
+        border:none;
+        color: #fff;
+        padding: 3px 8px;;
+      }
+      .select2-selection__choice__remove{
+        color: #fff;
+        &:hover{
+          color: #fff;
+        }
+      }
+    }
+  }
+  .select2-search__field{
+    border-radius: $border-radius;
+    border-color:$input-border-color;
+    margin-bottom: 4px;
+  }
+}
+
+.select2-container-active{
+  .select2-choice,
+  .select2-choices {
+    border: none;
+    outline: none;
+    -webkit-box-shadow: none;
+            box-shadow: none;
+  }
+}
+.select2-container--disabled{
+  .select2-selection{
+      opacity: .4;
+      cursor: not-allowed!important;
+  }
+}
+.input-group{
+  .select2-selection{
+    border-radius: $border-radius 0 0 $border-radius;
+    border-right:0;
+  }
+  .select2-container{
+    position: relative;
+    z-index: 2;
+    -webkit-box-flex: 1;
+    -ms-flex: 1;
+    flex: 1;
+    margin-bottom: 0;
+    .select2-search--inline .select2-search__field{
+      margin-top:3px;
+    }
+    .select2-selection.select2-selection--multiple{
+      padding: .3rem 0;
+      line-height: 1;
+      height: 2.8rem;
+      border-right: 0;
+      .select2-selection__choice{
+        margin: 0 .4rem 0 0;
+      }
+    }
+  }
+}

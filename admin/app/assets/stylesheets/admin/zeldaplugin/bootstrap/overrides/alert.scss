@@ -1,0 +1,30 @@
+.alert{
+  margin-bottom:0;
+}
+.alert-default{
+  background-color: $table-bg-accent;
+	color: $gray;
+  border: solid 1px $border-color;
+}
+.content-table{
+  .alert-no-record{
+    overflow: hidden;
+    border-radius: 0;
+    border:none;
+  }
+}
+.content{
+  .content-main-alert{
+    & + .p-3{
+      .alert-no-record{
+        height: calc(100vh - 193px);
+      }
+    }
+  }
+}
+//制御エリア
+.alert-warning{
+  .modal-body-control{
+    background-color: #faf2cc !important;
+  }
+}

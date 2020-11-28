@@ -1,0 +1,17 @@
+public_url: 'http://localhost'
+private_url: 'http://web-server'
+
+db:
+  password: test
+common_db:
+  password: test
+common_platfom_db:
+  password: test
+
+# for donkey auth
+auth:
+  app_redirect_uri: 'http://localhost/platform/auth/callback'
+
+# localstack
+s3:
+  endpoint: 'http://localstack:4572'

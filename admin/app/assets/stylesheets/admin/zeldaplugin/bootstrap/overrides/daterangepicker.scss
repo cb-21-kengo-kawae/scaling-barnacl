@@ -1,0 +1,64 @@
+.daterangepicker{
+  i:before{
+    font-family: "icon";
+    font-style: normal;
+  }
+  .daterangepicker_input{
+    i:before{
+      content:'\F740';
+    }
+    .input-mini{
+      color: $gray-dark;
+    }
+  }
+  .calendar-table{
+    .prev i:before{
+      content: '\F317'
+    }
+    .next i:before{
+      content: '\F318'
+    }
+  }
+}
+.cancelBtn{
+  float:right;
+  margin-right: $spacer1;
+}
+.applyBtn{
+  float: right;
+}
+.daterangepicker{
+  .calendar{
+    padding-bottom: 40px;
+  }
+  .ranges{
+    margin:0;
+    ul{
+      width: 139px!important;
+      padding-bottom: 44px;
+      margin: $spacer1;
+      li{
+        padding: 0.5rem 1rem;
+        margin:$spacer1 0 0 0;
+        box-shadow: 0px 2px 2px 0px rgba(105,105,105,.3);
+        &:first-child{
+          margin-top: 0;
+        }
+        &:last-child{
+          display: none;
+        }
+      }
+    }
+  }
+  .range_inputs{
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    right: 0;
+    border-top: solid 1px $border-color;
+    padding: $spacer2;
+    .btn{
+      width: 95px;
+    }
+  }
+}

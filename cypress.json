@@ -1,0 +1,14 @@
+{
+  "env": {
+    "homeUrl": "http://localhost/template4th/",
+    "testUser": {
+      "identifier": "TEST",
+      "email": "user@example.com",
+      "password": "abcd1234"
+    },
+    "timezone": "Asia/Tokyo"
+  },
+  "defaultCommandTimeout": 12000,
+  "execTimeout": 400000,
+  "pageLoadTimeout": 400000
+}

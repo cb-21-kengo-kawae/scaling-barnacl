@@ -1,0 +1,318 @@
+ja:
+  brand: b→dash
+
+  copyright_html: '&copy; From Scratch Inc. 2016'
+
+  language:
+    ja: 日本語
+    en: English
+    switch: 言語切り替え
+
+  date:
+    formats:
+      zelda_default: "%Y/%m/%d"
+  time:
+    formats:
+      zelda_default: "%Y/%m/%d %H:%M"
+
+  menu:
+    home: ホーム
+    platform:
+      target: ターゲット
+      view: ビュー変更
+      account: アカウント設定
+      data: データ管理
+      setting: 設定
+      ads: 広告DMP連携
+    marketing:
+      label: マーケティング
+      campaign: キャンペーン
+      scenario: シナリオ
+    sfa:
+      label: セールス
+      project: 案件管理
+      company: 企業管理
+      merchandise: 商材管理
+      sales_representative: 営業管理
+      business_file: ビジネスファイル管理
+      lead: 顧客
+    config:
+      profile: プロフィール
+      switch_data_views: データビュー切替え
+      sign_out: ログアウト
+    contact:
+      label: お問い合わせ
+    action:
+      label: アクション
+    push_notification:
+      label: プッシュ通知
+    line:
+      label: LINE
+    sms:
+      label: SMS
+    customer:
+      label: オーディエンス
+    collaboration:
+      label: ダッシュボード
+    analyses:
+      label: 分析
+    recommendation:
+      label: レコメンド
+    clerk:
+      label: Webテスト
+    receptions:
+      label: Web接客
+    mobile_receptions:
+      label: アプリ接客
+    contents:
+      label: コンテンツ
+      sites: サイト管理
+      themes: テーマ管理
+      creatives: イメージ管理
+      form_respondents: レポート
+    preparation:
+      label: データパレット
+    billing:
+      label: 契約/利用状況
+    support:
+      label: サポート
+    bi:
+      label: BI
+    crm:
+      label: CRM
+    scoring:
+      label: スコアリング
+    cart:
+      label: カート
+
+  policy_control:
+    has_no_policy: 権限がありません
+    has_no_contract: 契約対象外のアプリケーションです
+
+  app_launcher:
+    no_replay: ログイン後にランチャーを表示しない
+    create_shortcut: ショートカットを作る
+
+  sidebar:
+    settings:
+      account:
+        label: アカウント設定
+        contract: アカウント管理
+        logging: Webサイト計測タグ
+        users:
+          label: ユーザー
+          index: ユーザー一覧
+        login_histories:
+          label: アクセス履歴
+          index: アクセス履歴一覧
+        ad_agencies:
+          label: 広告代理店
+          index: 広告代理店一覧
+        role: 権限
+        data_view: データビュー
+        tracking_info: トラッキング情報
+        domain: クロスドメイン設定
+        sdk_measurement_sets: アプリ計測設定
+        mobile_verify: モバイルデータ検証
+        short_url:
+          label: 短縮URL
+          short_url_setting: 短縮URL一覧
+        aws_settings:
+          label: AWS設定
+          aws_accounts: AWSアカウント設定
+          aws_iams: AWS IAM設定
+      external_service:
+        label: 外部連携
+        sftp_key: SFTP鍵設定
+        api_setting: API接続設定
+        ad_vendors: 広告DMP連携設定
+        ad_vendor_accounts: 広告DMP連携アカウント設定
+      measurement_url:
+        label: 計測URL設定
+        ads: 広告URL設定
+      data_view:
+        label: データビュー
+        information: データビュー情報
+        logging: ログ計測設定
+        available_data: データ設定
+        user: ユーザー設定
+        web_log_filter: ログフィルタ設定
+        excluded_ip_address: 計測除外IPアドレス設定
+        export: データエクスポート
+        external_table_relations: リレーション設定
+        idmappings: Web・モバイルデータ連携
+        idmappings_sub: Web・モバイルデータ連携設定
+        permitted_ip_addresses: アクセス許可IPアドレス設定
+        common_tag_setting: 共通タグ設定
+        cart_tag_setting: カートタグ設定
+      goals:
+        label: コンバージョン設定
+      analyse:
+        label: 分析
+        column: 表項目設定
+        pattern: データパターン設定
+        culc: 計算指標設定
+        collection: 集計指標設定
+        delivery: レポート配信設定
+      action:
+        label: アクション
+        scenario: シナリオ
+        scenario_approval_option: シナリオ承認設定
+        mail: メール
+        mail_setting: メール設定
+        mail_restriction: メール配信制御設定
+        mail_unsubscribe: 配信停止メールアドレス設定
+        push: プッシュ通知
+        push_client: プッシュ通知連携設定
+        push_send_options: プッシュ通知配信制御設定
+        line: LINE
+        line_channels: LINE設定
+        line_send_options: LINE配信制御設定
+        sms: SMS
+        sms_setting: SMS設定
+        win_push: windowsプッシュ通知
+        win_push_client: windowsプッシュ通知連携設定
+        win_push_send_options: windowsプッシュ通知配信制御
+        scenario_external_linkage: シナリオ外部連携
+        yappli_client: Yappli設定
+        yappli_send_options: Yappli連携制御設定
+      contents:
+        label: コンテンツ
+        senders: 自動返信メール送信元設定
+        recipients: 管理者通知メール送信先設定
+        csr: CSR・秘密鍵生成
+      recommendation:
+        label: レコメンド
+        data_set_setting: レコメンドデータセット設定
+      clerk:
+        label: Webテスト
+        tag_setting: Webテストタグ
+      receptions:
+        label: Web接客
+        general_setting: Web接客設定
+        tag: Web接客タグ
+        tag_setting: Web接客タグ設定
+      customer:
+        label: 顧客
+        suspend: 配信停止ユーザー設定
+      audience:
+        label: オーディエンス
+        scoring_behavior_master: スコアリング行動マスタ設定
+      other:
+        label: その他
+
+  admin:
+    menu:
+      applications:
+        label: OAuthアプリケーション管理
+        admins: Adminアプリケーション
+        users: アプリケーション
+      services:
+        label: 各サービス管理画面
+        admin: Admin
+        auth: Auth
+        platform: Platform
+        action: Action
+        contents: Contents
+        report: Report
+        recommend: Recommend
+        clerk: Clerk
+        scoring: Scoring
+        preparation: Preparation
+    sidebar:
+      dashboard: ダッシュボード
+
+  components:
+    zelda_labeling:
+      placeholder: ラベル名を入力してください
+      tag_placeholder: ''
+      selected_label: ''
+      select_label: ''
+      deselect_label: ''
+
+  notifications:
+    empty: 通知メッセージはありません
+    category:
+      my_report: マイレポート
+      segment: セグメント
+      data_management: データ管理
+      customer: 顧客データ
+      transaction: 履歴データ
+      order: 注文データ
+      data_integration: データパレット
+      template_report: 定型レポート
+      crm: CRM
+    message:
+      my_report:
+        success: '%sの集計が完了しました'
+        failure: '%sの集計が失敗しました'
+      segment: 'セグメント%sの抽出が完了しました'
+      download:
+        success: '%sがダウンロードできます'
+        failure: '%sのダウンロードファイルの作成が失敗しました'
+      import:
+        success:
+          with_name: '%sのデータ自動取込が完了しました'
+          without_name: 'データの自動取込が完了しました'
+        failure:
+          with_name: '%sのデータ自動取込が失敗しました'
+          without_name: 'データ自動取込が失敗しました'
+      data_management:
+        search:
+          complete: '%sが完了しました'
+          complete_with_expired_at: '%sのデータフィルタ抽出(有効期間:%t)が完了しました'
+      data_integration:
+        success: '%sの自動取込が完了しました'
+        failure: '%sの自動取込に失敗しました'
+        linkages:
+          file_name_invalid:
+            failure: '%sの取込が失敗しました ※ファイル名に不正な値が含まれるため'
+      template_report:
+        success: '%sの集計が完了しました'
+        failure: '%sの集計が失敗しました'
+      crm:
+        apply:
+          success: '%sの表示項目設定の反映が完了しました'
+          failure: '%sの表示項目設定の反映が失敗しました'
+        search:
+          complete: '%sが完了しました'
+          complete_with_expired_at: '顧客一覧の検索処理(有効期間:%s)が完了しました'
+          timeout: '顧客一覧の検索処理がタイムアウトしました'
+    tag:
+      my_report:
+        success: '集計完了'
+        failure: '集計失敗'
+      segment: 'セグメント抽出完了'
+      download:
+        success: 'ダウンロードファイル作成完了'
+        failure: 'ダウンロードファイル作成失敗'
+      import:
+        success:
+          with_name: 'データ自動取込完了'
+          without_name: 'データ自動取込完了'
+        failure:
+          with_name: 'データ自動取込失敗'
+          without_name: 'データ自動取込失敗'
+      data_management:
+        search:
+          complete: '検索完了'
+      data_integration:
+        success: '自動取込完了'
+        failure: '自動取込失敗'
+        linkages:
+          file_name_invalid:
+            failure: '取込失敗'
+      template_report:
+        success: '集計完了'
+        failure: '集計失敗'
+      crm:
+        apply:
+          success: '表示項目設定の反映完了'
+          failure: '表示項目設定の反映失敗'
+        search:
+          complete: '検索完了'
+          timeout: '検索タイムアウト'
+    time:
+      minute: '分前'
+      hour: '時間前'
+      day: '日前'

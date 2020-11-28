@@ -1,0 +1,26 @@
+.header-logo.d-flex.float-xs-left
+  = link_to app_admin_path(:admin, :dashboard), class: 'flex-xs-middle'
+    = image_tag "admin/zeldaplugin/bdash_logo.svg", alt: "B→Dash Marketing Cloud", width: "120"
+ul.nav.nav-pills.header-nav-menu
+  li.nav-item
+    = link_to t('menu.home'), app_admin_path(:admin, :dashboard), class: 'px-3 nav-link'
+  - if admin_operator.try(:role) && admin_operator.role.to_sym == :director
+    li.nav-item.dropdown
+      a.nav-link.dropdown-toggle data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false"
+        =t 'admin.menu.applications.label'
+      .dropdown-menu
+        = link_to t('admin.menu.applications.admins'), app_admin_path(:admin, :services), target: "_blank", class: 'dropdown-item'
+        = link_to t('admin.menu.applications.users'),  app_admin_path(:auth, :services),  target: "_blank", class: 'dropdown-item'
+  li.nav-item.dropdown
+    a.nav-link.dropdown-toggle data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false"
+      =t 'admin.menu.services.label'
+    .dropdown-menu
+      = link_to t('admin.menu.services.auth'),     app_admin_path(:auth, :dashboard),     rel: rel_external(:auth),     class: 'dropdown-item'
+      = link_to t('admin.menu.services.platform'), app_admin_path(:platform, :dashboard), rel: rel_external(:platform), class: 'dropdown-item'
+      = link_to t('admin.menu.services.action'),   app_admin_path(:action, :dashboard),   rel: rel_external(:action),   class: 'dropdown-item'
+      = link_to t('admin.menu.services.report'),   app_admin_path(:report, :dashboard),   rel: rel_external(:report),   class: 'dropdown-item'
+      = link_to t('admin.menu.services.delivery'), app_admin_path(:delivery, :dashboard), rel: rel_external(:delivery), class: 'dropdown-item'
+      = link_to t('admin.menu.services.recommend'), app_admin_path(:recommend, :dashboard), rel: rel_external(:recommend), class: 'dropdown-item'
+      = link_to t('admin.menu.services.clerk'), app_admin_path(:clerk, :dashboard), rel: rel_external(:clerk), class: 'dropdown-item'
+      = link_to t('admin.menu.services.scoring'), app_admin_path(:scoring, :dashboard), rel: rel_external(:scoring), class: 'dropdown-item'
+      = link_to t('admin.menu.services.preparation'), app_admin_path(:preparation, :dashboard), rel: rel_external(:preparation), class: 'dropdown-item'

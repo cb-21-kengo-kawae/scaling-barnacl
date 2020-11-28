@@ -1,0 +1,22 @@
+.carousel{
+	background:#fff;
+	border-bottom:solid 1px $border-color;
+	.carousel-control{
+		width: auto;
+		background: none;
+		top:calc(50% - 1rem);
+		bottom:auto;
+		opacity: 1;
+		i{
+			font-size: $font-size-lg;
+			padding: 0;
+			min-width: 10px;
+		}
+		&.left{
+			left:$spacer2;
+		}
+		&.right{
+			right:$spacer2;
+		}
+	}
+}

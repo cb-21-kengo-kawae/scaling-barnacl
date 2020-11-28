@@ -1,0 +1,90 @@
+version: '3'
+services:
+  web-server:
+    image: nginx:1.11.5-alpine
+    volumes:
+      - ./docker/middleware/web-server/nginx.conf:/etc/nginx/nginx.conf
+    ports:
+      - "80:80"
+    depends_on:
+      - donkey-auth
+      - zelda-admin
+      - zelda-platform
+  localstack:
+    image: localstack/localstack
+    ports:
+      - "4567-4584:4567-4584"
+      - "8080:8080"
+    environment:
+      - TMPDIR=/private$TMPDIR
+      - DATA_DIR=/tmp/localstack/data
+      - SERVICES=s3,sqs,ses
+    volumes:
+      - ./docker/middleware/localstack/aws_config:/root/.aws/
+      - ./docker/middleware/localstack/init.sh:/docker-entrypoint-initaws.d/init.sh
+  zelda-app-db:
+    image: mysql:5.7
+    environment:
+      MYSQL_ROOT_PASSWORD: "test"
+    volumes:
+      - ./docker/middleware/zelda-app-db/create_readonly_user.sql:/docker-entrypoint-initdb.d/create_readonly_user.sql
+      - ./docker/db-backups:/docker-entrypoint-initdb.d/
+    ports:
+      - "3306:3306"
+  zelda-redis:
+    image: redis:3.2.3-alpine
+    ports:
+      - "6379:6379"
+  donkey-auth:
+    build:
+      context: ./docker/services/donkey-auth
+      args:
+        - BUNDLE_GITHUB__COM=$BUNDLE_GITHUB__COM
+        - APP_HOME=/var/www
+    environment:
+      - BUNDLE_GITHUB__COM
+      - SOURCE_BRANCH=develop
+      - DISABLE_SPRING=1
+    volumes:
+      - ./docker/services/donkey-auth/files:/var/www/tmp/overwrite/
+      - ./docker/services/donkey-auth/start.sh:/var/www/_start.sh
+      - ./docker/services/donkey-auth/settings.local.yml:/var/www/config/settings.local.yml
+    command: ./_start.sh
+    depends_on:
+      - zelda-app-db
+  zelda-admin:
+    build:
+      context: ./docker/services/zelda-admin
+      args:
+        - BUNDLE_GITHUB__COM=$BUNDLE_GITHUB__COM
+        - APP_HOME=/var/www
+    environment:
+      - BUNDLE_GITHUB__COM
+      - SOURCE_BRANCH=develop
+      - DISABLE_SPRING=1
+    volumes:
+      - ./docker/services/zelda-admin/start.sh:/var/www/_start.sh
+      - ./docker/services/zelda-admin/settings.local.yml:/var/www/config/settings.local.yml
+    command: ./_start.sh
+    depends_on:
+      - zelda-app-db
+  zelda-platform:
+    build:
+      context: ./docker/services/zelda-platform
+      args:
+        - BUNDLE_GITHUB__COM=$BUNDLE_GITHUB__COM
+        - APP_HOME=/var/www
+    environment:
+      - BUNDLE_GITHUB__COM
+      - SOURCE_BRANCH=develop
+      - DISABLE_SPRING=1
+    volumes:
+      - ./docker/services/zelda-platform/files:/var/www/tmp/overwrite/
+      - ./docker/middleware/localstack/aws_config:/root/.aws/
+      - ./docker/services/zelda-platform/start.sh:/var/www/_start.sh
+      - ./docker/services/zelda-platform/settings.local.yml:/var/www/config/settings.local.yml
+    command: ./_start.sh
+    depends_on:
+      - zelda-app-db
+      - localstack
+      - zelda-redis

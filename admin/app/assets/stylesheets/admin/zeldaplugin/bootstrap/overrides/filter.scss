@@ -1,0 +1,331 @@
+.filter{
+  background:#fff;
+  position:absolute;
+  top:-1px;
+  bottom:0;
+  right:-500px;
+  width:500px;
+  z-index:9;
+  -webkit-transition: right $speed-high ease;
+     -moz-transition: right $speed-high ease;
+      -ms-transition: right $speed-high ease;
+       -o-transition: right $speed-high ease;
+          transition: right $speed-high ease;
+  border:solid 1px $border-color;
+  &.filter-report{
+    position: fixed;
+    top:114px;
+  }
+  &.is-show{
+    right:-1px;
+    box-shadow: -2px 0 3px 0 $shadow-color;
+  }
+  .btn-outline-secondary{
+    background: #fff;
+  }
+  .filter-header{
+    padding: $spacer3;
+    position: relative;
+    font-weight: bold;
+    color: $gray-dark;
+    border-bottom: solid 1px $border-color;
+    .filter-close-btn{
+      background: none;
+      border:none;
+      right: $spacer3;
+      position: absolute;
+      top: 50%;
+      margin-top: -.6em;
+    }
+  }
+  .filter-name{
+    border-bottom: solid 1px $border-color;
+    margin: 0 $spacer3;
+    input{
+      padding: $spacer3 0;
+      background: none;
+      border:none;
+      width: 100%;
+      font-size: $font-size-sm;
+    }
+    &+.filter-main{
+      height: calc(100% - 147px);
+    }
+  }
+  .filter-main{
+    height: calc(100% - 91px);
+    overflow: auto;
+    .filter-cond-head{
+      margin:0 40px $spacer2 0;
+    }
+    .filter-add-cond{
+      width: 100%;
+      padding: $spacer3;
+      border:dotted 2px $filter-button-color;
+      background: #fff!important;
+      margin-top: $spacer2;
+      &:hover{
+        background: $filter-button-color!important;
+        color:#fff;
+      }
+    }
+  }
+  .filter-footer{
+    padding: $spacer2 $spacer3;
+    border-top:solid 1px $border-color;
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom:0;
+    .btn{
+      width: 92px;
+    }
+  }
+}
+.filter-label{
+  font-size: $font-size-lg;
+  input{
+    line-height: $font-size-lg;
+    margin-right: $spacer1;
+    vertical-align: top;
+    margin-top: 3px;
+  }
+}
+
+
+.filter-cond-or{
+  margin-top: $spacer3;
+}
+.filter-cond-switch{
+  .btn{
+    color: $brand-primary;
+    background: #fff;
+    &:hover{
+      border-color: transparent;
+    }
+    &.active{
+      background: $brand-primary;
+      color: #fff;
+    }
+  }
+}
+
+.filter-cond{
+  border-radius: $border-radius-lg;
+  background: #fff;
+  padding: $spacer2;
+  margin-bottom: $spacer2;
+  &:last-of-type{
+    margin-bottom: 0;
+  }
+  .filter-cond-switch{
+    .btn{
+
+      &:not(.active){
+        color: $filter-button-color;
+      }
+      &.active{
+        background: $filter-button-color;
+      }
+    }
+  }
+
+  .filter-cond-head{
+    margin:0 48px $spacer2 57px;
+    &.is-only{
+      margin-left: 0!important;
+    }
+  }
+  .filter-cond-row{
+    margin-bottom: $spacer2;
+    padding: 0;
+    &:last-child{
+      margin-bottom:0;
+    }
+  }
+  .filter-cond-name{
+    color: $gray;
+    font-weight: bold;
+    margin-bottom: $spacer2;
+  }
+  .filter-cond-item{
+    .dropdown-menu{
+      width: 100%;
+    }
+    .dropdown-toggle:after{
+      position: absolute;
+      right: $spacer1;
+      top:50%;
+    }
+    .filter-cond-item-search{
+      width: calc(100% - 100px);
+    }
+    .list-item{
+      padding: $spacer2;
+      cursor: pointer;
+    }
+  }
+  .filter-selected-cond{
+    display: none;
+  }
+  .tag-cond{
+    background: $filter-button-color;
+    padding: .5em .4em;
+    width: 40px;
+    cursor: pointer;
+  }
+}
+
+.btn-cond-type{
+  border: none;
+  background: none;
+  border-radius: 1em;
+  color: rgba(130,145,153,100);
+  letter-spacing: 2px;
+  &.active{
+    background: $filter-button-color;
+    color:#fff;
+  }
+  &:not(.active){
+    background: none;
+    box-shadow: none;
+  }
+}
+
+.filter-condition-title{
+  font-size: $font-size-sm;
+  input{
+  border:none;
+  border-radius: 0;
+  padding: 0;
+  font-weight: bold;
+  display: inline-block;
+  width: 90%;
+  }
+}
+.filter-condition-btn{
+  text-align: center;
+  .btn{
+    min-width: 50px;
+    border-radius: 13px;
+    background: none;
+    color: $brand-primary;
+    &.active{
+    background: $brand-primary;
+    color: #fff;
+    }
+  }
+}
+.filter-add-condition{
+  font-size: $font-size-sm;
+  width: 50%;
+  padding: $spacer3;
+  margin: 0 auto;
+  display: block;
+  font-weight: bold;
+  border-radius: $border-radius-lg;
+}
+
+.filter-cond-and,.filter-cond-block{
+  background: $gray-lighter;
+  border: solid 1px $border-color;
+  padding: $spacer2;
+  .filter-cond:last-of-type{
+    margin-bottom: 0!important;
+  }
+  .filter-cond-block{
+    border: solid  4px $border-color;
+  }
+}
+.cond-checkbox{
+  display: none;
+}
+.filter-cond-join{
+  margin-top: $spacer2;
+  border-top: 2px dashed $border-color;
+}
+.filter-cond-join-btn{
+  padding-top: $spacer2;
+  text-align: right;
+}
+.filter-calc{
+  background: $gray-light;
+  line-height: 40px;
+  padding: 0 $spacer3;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+}
+.filter-detail-wrap{
+  height: calc(100% - 40px);
+  overflow-y: auto;
+}
+// sidepane
+.content-side-pane{
+  .filter-condition-group{
+    background: $brand-primary-light;
+    border: solid 1px $border-color;
+    padding: $spacer2;
+    .filter-cond{
+      margin-bottom: $spacer2;
+      &:last-of-type{
+        margin-bottom: 0;
+      }
+    }
+  }
+  .filter-detail-wrap{
+    font-size: $font-size-xs;
+    .filter-detail{
+      padding: $spacer2;
+      border:solid 1px $border-color;
+      margin-bottom: $spacer1;
+      &:last-child{
+        margin-bottom: 0;
+      }
+    }
+  }
+}
+//ブロック化処理時
+.content-main{
+  &.is-blocking{
+    background: $gray-lighter;
+    .cond-checkbox{
+      display: inline;
+    }
+    .filter-cond,.title-btnarea button{
+      position: relative;
+      z-index: 10;
+    }
+    .filter-condition-btn:nth-last-of-type(2),.segment-add-condition{
+      display: none;
+    }
+    .filter-cond.is-selected{
+      .filter-label{
+        background: $brand-primary
+      }
+    }
+    .filter-cond-block{
+      border: solid  4px $border-color;
+      &.is-selected{
+        background: $brand-primary-light
+      }
+    }
+  }
+}
+
+// フィルタ以外の条件設定
+.cond-head{
+  margin-right: 56px;
+}
+.cond-btn{
+  text-align: center;
+  .btn{
+    border-radius: 13px;
+    background: none;
+    color: $brand-primary;
+    &.active{
+    background: $brand-primary;
+    color: #fff;
+    }
+  }
+}

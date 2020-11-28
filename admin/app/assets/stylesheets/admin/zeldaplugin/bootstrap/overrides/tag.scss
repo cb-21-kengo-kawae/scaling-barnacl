@@ -1,0 +1,64 @@
+
+.tag{
+  &.tag-normal{
+    color: $gray;
+    background: #fff;
+    border:solid 1px $gray;
+  }
+  // タグサイズ
+  &.tag-size-s{
+    width: $tag-size-s;
+  }
+  &.tag-size-m{
+    width: $tag-size-m;
+  }
+  &.tag-size-l{
+    width: $tag-size-l;
+  }
+  &.tag-size-xl{
+    width: $tag-size-xl;
+  }
+  a{
+    color:#fff!important;
+    text-decoration: none!important;
+    &:hover{
+      color:#fff!important;
+      text-decoration: underline!important;
+    }
+  }
+  &.is-warning{
+    position: relative;
+    &:after{
+      content: "";
+      background-image: image-url('zeldaplugin/common/i-warning.svg');
+      background-size: 100% auto;
+      position: absolute;
+      top: -.6em;
+      right: -.9em;
+      width: 20px;
+      height: 20px;
+      display: block;
+    }
+  }
+  &.is-danger{
+    position: relative;
+    &:after{
+      content: "";
+  		background-image: image-url('zeldaplugin/common/i-error.svg');
+      background-size: 100% auto;
+      position: absolute;
+      top: -.6em;
+      right: -.9em;
+      width: 20px;
+      height: 20px;
+      display: block;
+    }
+  }
+}
+//IEバグFIX
+@media all and (-ms-high-contrast:none){
+  .tag{
+    display: inline!important;
+    zoom: 1!important;
+  }
+}

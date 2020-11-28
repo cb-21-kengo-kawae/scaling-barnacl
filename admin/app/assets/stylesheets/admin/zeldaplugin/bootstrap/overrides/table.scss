@@ -1,0 +1,317 @@
+.table{
+	background:#fff;
+	margin-bottom:0;
+	th{
+		vertical-align: middle;
+	}
+  thead{
+      tr{
+          &:first-child{
+              th,td{
+                  border-top:none;
+                  white-space: nowrap;
+              }
+          }
+      }
+  }
+  tbody{
+      tr{
+
+        &:first-child{
+            th,td{
+                border-top:none;
+            }
+        }
+				&.row-draggable{
+					width: 100%;
+					th:first-child,td:first-child{
+						background-image: url('zeldaplugin/draggable_row.svg');
+						background-position: left 7px center;
+						background-repeat: no-repeat;
+						padding-left: $spacer4;
+					}
+				}
+				&.ui-sortable-placeholder{
+					display: none;
+				}
+				&.ui-sortable-helper{
+					background: #fff;
+					border:solid 1px $border-color;
+					display: table!important;
+					width: 100%;
+					td,th{
+						border-top:none;
+					}
+				}
+      }
+    }
+	.thead-default {
+		background:$gray-lighter;
+		th {
+				color:$gray-dark;
+				background: none;
+	    	vertical-align: middle;
+	    	position:relative;
+	    	user-select: none;
+				text-align: center;
+				&:not(.col-min){
+					padding: 1.4rem 2.2rem;
+				}
+				i{
+					position:absolute;
+					&.i-bottom,&.i-top{
+		    		right:0;
+						font-size: $font-size-lg;
+						top:50%;
+						margin-top: -.5em;
+						display: none;
+		    	}
+				}
+				&:hover,&.active{
+					cursor:pointer;
+					i{
+						&.i-bottom,&.i-top{
+							display: block;
+			    	}
+					}
+				}
+				&.col-report-index{
+					color: $border-color-dark;
+				}
+	   	}
+			td{
+				text-align: center;
+				&.col-report-index{
+					color: $border-color-dark;
+					font-weight: normal;
+				}
+			}
+			td,th{
+				&.is-sortable{
+					position: relative;
+					i{
+						position:absolute;
+						&.i-bottom,&.i-top{
+			    		right:0;
+							font-size: $font-size-lg;
+							top:50%;
+							margin-top: -.5em;
+							display: none;
+			    	}
+					}
+					&:hover,&.active{
+						cursor:pointer;
+						i{
+							&.i-bottom,&.i-top{
+								display: block;
+				    	}
+						}
+					}
+				}
+			}
+	   	.col-min{
+	   		width:calc(12px + 1rem);
+	   	}
+			.col-short{
+	   		width:calc(12px + 1rem);
+	   	}
+			.col-control{
+				width: 133px;
+			}
+			.col-control-l{
+				width: 242px;
+			}
+	}
+	&.table-bordered{
+		thead{
+			th,td{
+				border-bottom-width:1px;
+			}
+		}
+	}
+	&.table-bordered-inner{
+		th,td{
+			border-bottom: $table-border-width solid $table-border-color;
+			border-right: $table-border-width solid $table-border-color;
+			&:last-child{
+				border-right:none;
+			}
+		}
+	}
+	&.table-bordered-none{
+		th,td{
+			border:none;
+		}
+	}
+}
+.content-table{
+    .table-wrap{
+        overflow: auto;
+        height: calc(100% - 45px);
+    }
+		.table-fixed-wrap{
+        overflow: auto;
+        height: calc(100% - 45px);
+				position: absolute;
+				left:$spacer3;
+				right:$spacer3;
+				&+.content-main-footer{
+					position: absolute!important;
+					width: 100%;
+					bottom: 0;
+				}
+				.area-scroll-x{
+					width: 100%;
+				}
+		}
+		.table-header{
+			border-bottom: solid 1px $border-color;
+			padding: $spacer2 $spacer3;
+			min-height: 44px;
+			&+.table-wrap,&+.table-fixed-wrap{
+        height: calc(100% - 90px);
+			}
+		}
+    .table{
+				thead{
+					th{
+						 white-space: nowrap;
+					}
+					&.is-multi-sorted{
+						th{
+							cursor: default!important;
+							&.active{
+								background: $brand-primary;
+								color: #fff;
+								i{
+									display: block!important;
+								}
+							}
+							&:hover{
+								i{
+									&.i-bottom,&.i-top{
+										display: none;
+						    	}
+								}
+							}
+						}
+					}
+				}
+        tbody{
+            td,th{
+              	max-width: 300px;
+                white-space: nowrap;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                vertical-align: middle;
+
+                i:before{
+                    vertical-align: middle;
+                }
+								&>.btn{
+	                   margin:-.5rem 0;
+	               }
+								.sr-only{
+									display: none;
+								}
+								.select2-container .select2-selection.select2-selection--multiple .select2-selection__choice{
+									font-size: $font-size-xs;
+									margin-top:  3px;
+								}
+								textarea.form-control{
+									height: 2.8rem;
+								}
+								&.cell-nowrap{
+									overflow: visible !important;
+									text-overflow: clip !important;
+									max-width: initial !important;
+								}
+            }
+        }
+    }
+    tr{
+        .table-btn-edit{
+            display: none;
+            padding:0;
+            border:none;
+            background: #fff;
+            color: $brand-primary;
+            border:solid 1px $brand-primary;
+            border-radius:50%;
+            position:absolute;
+            z-index: 10;
+            right: 0;
+            width: 24px;
+            line-height: 24px;
+            text-align: center;
+            margin-top: -2rem;
+        }
+        &:hover{
+            .table-btn-edit{
+                display: block;
+            }
+        }
+        &.editing-row{
+            background:$brand-primary-light;
+            .table-btn-edit{
+                display: block;
+                background: $brand-primary;
+                color: #fff;
+                margin-top: -1.3rem;
+            }
+        }
+    }
+    .table-overlay{
+        position: fixed;
+        background: #fff;
+        opacity:.7;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+				display: none;
+    }
+}
+.content-report{
+	.table{
+		tbody{
+			th{
+				background: $gray-lighter;
+				color:$gray;
+			}
+		}
+	}
+}
+.main{
+	&.is-edit-table{
+		.content-main{
+			.table.is-editing{
+				position: relative;
+				z-index: 100;
+				.selected-cell{
+					background: $brand-primary-light!important;
+					&:hover{
+						.i-add_circle{
+							display: inline;
+						}
+					}
+				}
+			}
+		}
+		.table-overlay{
+			display: block;
+			z-index: 10;
+		}
+	}
+}
+/* ----------------
+表項目設定
+------------------- */
+.custom-table-col{
+  margin: 0 auto;
+  .btn.is-hidden{
+    opacity: .5;
+    background: $gray;
+    border-color: transparent;
+  }
+}

@@ -1,0 +1,107 @@
+//3.0ランチャー
+@import '../../../zeldaplugin_variables_v3';
+
+.is-launcher {
+  /* ------------------------------------
+  color
+  ------------------------------------ */
+  $shadow-color: rgba(105, 105, 105, 0.3);
+  $shadow-color-dark: rgba(0, 0, 0, 0.3);
+  
+  /* ------------------------------------
+  border
+  ------------------------------------ */
+  $card-radius: $border-radius-xlg;
+  
+  /* -----------
+  font
+  ------------ */
+  $font-size-s: 0.8vw;//小さい文字？
+
+  /*------------
+  button
+  ------------ */
+  $app-btn-size-s: 8vw;
+
+  /* -----------
+  space
+  ------------ */
+  $spacer: 1rem;
+  $spacer-x: $spacer;
+  $spacer-y: $spacer;
+  $spacer1: ($spacer * 0.4);
+  $spacer2: ($spacer-x * 0.8);
+  $spacer3: ($spacer-x * 1.6);
+  $spacer4: ($spacer-x * 2.4);
+  $spacer5: ($spacer-x * 3.2);
+
+  /* ------------------------------------
+  animation
+  ------------------------------------ */
+  $speed-normal: 0.4s;
+
+  width: 70vw;
+  max-width: 70vw;
+  .modal-body-content {
+    display: flex;
+    align-items: center;
+    padding: 0 $spacer5;
+
+    .launcher-app-list-wrap {
+      display: flex;
+      justify-content: center;
+      width: 100%;
+    }
+    .launcher-app-list {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+
+      &.hex {
+        width: calc(6 * 8vw + 2 * 6 * 1.4rem);
+        &.plus-1 {
+          width: calc(7 * 8vw + 2 * 7 * 1.4rem);
+        }
+      }
+      li {
+        margin: 1.4rem;
+        cursor: pointer;
+
+        &.sortable-ghost {
+          opacity: 0;
+        }
+
+        &:hover {
+          .launcher-app-btn {
+            transform: scale(0.8, 0.8);
+            box-shadow: 0 2px 23px -2px $shadow-color;
+            img {
+              animation: appicon 0.5s linear 0s 1;
+            }
+          }
+        }
+
+        .launcher-app-btn {
+          border-radius: $card-radius;
+          background: $white;
+          width: $app-btn-size-s;
+          height: $app-btn-size-s;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+          box-shadow: 0 2px 23px -2px $shadow-color-dark;
+          text-align: center;
+          transition: transform $speed-normal;
+          img {
+            width: 50%;
+            margin-bottom: $spacer2;
+          }
+          .launcher-app-label {
+            font-size: $font-size-s;
+          }
+        }
+      }
+    }
+  }
+}
