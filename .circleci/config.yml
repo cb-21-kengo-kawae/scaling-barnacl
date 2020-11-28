@@ -1,0 +1,330 @@
+version: 2
+
+references:
+  # Cache Management
+  ## yarn
+  restore_cache_yarn: &restore_cache_yarn
+    keys:
+      - rails-yarn-circleci-{{ checksum "yarn.lock" }}
+      - rails-yarn-circleci-
+
+  save_cache_yarn: &save_cache_yarn
+    paths:
+      - node_modules
+    key: rails-yarn-circleci-{{ checksum "yarn.lock" }}
+
+  ## bundle
+  restore_cache_bundle: &restore_cache_bundle
+    keys:
+      - rails-bundle-v2-circleci-{{ checksum "Gemfile.lock" }}
+      - rails-bundle-v2-circleci-
+
+  save_cache_bundle: &save_cache_bundle
+    paths:
+      - vendor/circleci/bundle
+    key: rails-bundle-v2-circleci-{{ checksum "Gemfile.lock" }}
+
+  attach_workspace: &attach_workspace
+    attach_workspace:
+      at: ~/target
+
+  store_test_results: &store_test_results
+    store_test_results:
+      path: /tmp/circleci-test-results
+
+  store_artifacts: &store_artifacts
+    store_artifacts:
+      path: /tmp/circleci-artifacts
+      destination: .
+
+  filter_only_release: &filter_only_release
+    branches:
+      only:
+        - /^release-stg/
+        - /^release-prd/
+
+  filter_only_release_stg: &filter_only_release_stg
+    branches:
+      only:
+        - /^release-stg/
+
+  filter_only_release_prd: &filter_only_release_prd
+    branches:
+      only:
+        - /^release-prd/
+
+  filter_only_develop: &filter_only_develop
+    branches:
+      only:
+        - /^develop/
+
+  slack_notifier_stg: &slack_notifier_stg
+    name: slack to Mario#bd2-release-stg
+    command: |
+      export SLACK_OPS_WEBHOOK=https://hooks.slack.com/services/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
+      curl -s -S -X POST --data-urlencode "payload={'channel': '#bd2-release-stg', 'text': ':earth_asia: :fire: sync $CIRCLE_PROJECT_REPONAME (SHA1 `eval $SHORT_HASH`) to S3 completed (build <https://circleci.com/gh/$CIRCLE_PROJECT_USERNAME/$CIRCLE_PROJECT_REPONAME/$CIRCLE_BUILD_NUM|$CIRCLE_BUILD_NUM>) by $CIRCLE_USERNAME ' }" $SLACK_OPS_WEBHOOK >/dev/null
+
+  # Mario#bd2-release-prd
+  slack_notifier_prd: &slack_notifier_prd
+    name: slack to Mario#bd2-release-prd
+    command: |
+      export SLACK_OPS_WEBHOOK=https://hooks.slack.com/services/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
+      curl -s -S -X POST --data-urlencode "payload={'channel': '#bd2-release-prd', 'text': ':earth_asia: :fire: sync $CIRCLE_PROJECT_REPONAME (SHA1 `eval $SHORT_HASH`) to S3 completed (build <https://circleci.com/gh/$CIRCLE_PROJECT_USERNAME/$CIRCLE_PROJECT_REPONAME/$CIRCLE_BUILD_NUM|$CIRCLE_BUILD_NUM>) by $CIRCLE_USERNAME ' }" $SLACK_OPS_WEBHOOK >/dev/null
+
+  prepare_bundle: &prepare_bundle
+    name: bundle install on amazonlinux
+    command: bundle install -j4 --path $BUNDLE_PATH
+
+  set_aws_credentials: &set_aws_credentials
+    name: set up aws credentials for default
+    command: |
+      mkdir -p ~/.aws && touch ~/.aws/credentials && chmod 640 ~/.aws/credentials
+      echo "[default]" >> ~/.aws/credentials
+      echo "aws_access_key_id=${AWS_KEY_DEFAULT}" >> ~/.aws/credentials
+      echo "aws_secret_access_key=${AWS_SECRET_DEFAULT}" >> ~/.aws/credentials
+      echo "region=us-west-2" >> ~/.aws/credentials
+
+  set_aws_credentials_prd: &set_aws_credentials_prd
+    name: set up aws credentials for prd
+    command: |
+      mkdir -p ~/.aws && touch ~/.aws/credentials && chmod 640 ~/.aws/credentials
+      echo "[${CIRCLE_BRANCH}]" >> ~/.aws/credentials
+      echo "aws_access_key_id=${AWS_KEY_PRD}" >> ~/.aws/credentials
+      echo "aws_secret_access_key=${AWS_SECRET_PRD}" >> ~/.aws/credentials
+      echo "region=ap-northeast-1" >> ~/.aws/credentials
+
+  set_bundle_path_local: &set_bundle_path_local
+    name: set bundle parh at local and update bunlder
+    command: |
+      bundle config --local path $BUNDLE_PATH
+      sudo gem update bundler
+
+  deploy_assets_to_s3: &deploy_assets_to_s3
+    name: deploy assets to s3
+    command: bash ./.circleci/deployassets2s3.sh
+
+  deploy_to_s3: &deploy_to_s3
+    name: deploy to s3
+    command: bash ./.circleci/deploy2s3.sh
+
+  defaults: &defaults
+    working_directory: ~/target
+
+  ruby_defaults: &ruby_defaults
+    <<: *defaults
+    docker:
+      - image: fromscratch/ruby:2.7.1-node-12.18.0
+        environment:
+          DB_HOST: 127.0.0.1
+          REDIS_HOST: 127.0.0.1
+          CIRCLE_ARTIFACTS: /tmp/circleci-artifacts
+          CIRCLE_TEST_REPORTS: /tmp/circleci-test-results
+      - image: circleci/mysql:5.7.19
+      - image: circleci/redis:3.2.11-alpine
+    environment:
+      SECRET_KEY_BASE: $(bundle exec rake secret)
+      BUNDLE_PATH: vendor/circleci/bundle
+      SHORT_HASH: (echo $CIRCLE_SHA1 | cut -c -7)
+      CODECOV_TOKEN: a493d738-4d17-4923-b0f6-53a7ac7d18ee
+
+  amazonlinux_defaults: &amazonlinux_defaults
+    <<: *defaults
+    docker:
+      # TODO: 要変更
+      - image: fromscratch/ruby:2.6.2-amazonlinux2-20181114
+    environment:
+      BUNDLE_PATH: vendor/development/bundle
+
+  danger_defaults: &danger_defaults
+    <<: *defaults
+    docker:
+      - image: fromscratch/circleci-danger
+
+jobs:
+  build:
+    <<: *ruby_defaults
+    steps:
+      - checkout
+      - run: sudo gem update bundler
+
+      # yarn
+      - restore_cache: *restore_cache_yarn
+      - run: .circleci/yarn-install.sh
+      - save_cache: *save_cache_yarn
+
+      # bundle
+      - restore_cache: *restore_cache_bundle
+      - run:
+          name: install dependencies
+          command: |
+            bundle check --path $BUNDLE_PATH || \
+            (rm -rf $BUNDLE_PATH && bundle install -j4 --path $BUNDLE_PATH)
+      - save_cache: *save_cache_bundle
+      - run: bundle config --local path $BUNDLE_PATH
+
+      - persist_to_workspace:
+          root: ~/target
+          paths:
+            - .bundle
+            - vendor/circleci/bundle
+            - node_modules
+
+  danger:
+    <<: *danger_defaults
+    steps:
+      - checkout
+      - run: cp ~/danger/Dangerfile4th ./Dangerfile
+      - run: bundle exec danger --fail-on-errors=true
+
+  gitleaks:
+    docker:
+      - image: ruby:2.4.0
+        environment:
+          LANG: C.UTF-8
+    steps:
+      - checkout
+      - run: bash <(curl -s https://raw.githubusercontent.com/zricethezav/gitleaks-ci/master/gitleaks.sh)
+
+  code_analyze:
+    <<: *ruby_defaults
+    steps:
+      - checkout
+      - *attach_workspace
+      - run: .circleci/yarn-install.sh
+      - run:
+          name: run code-analyze
+          command: ./.circleci/code-analyze.sh
+      - *store_test_results
+      - *store_artifacts
+
+  rspec_and_check:
+    <<: *ruby_defaults
+    parallelism: 1
+    steps:
+      - checkout
+      - *attach_workspace
+      - run: *set_aws_credentials
+      - run: *set_bundle_path_local
+      - run: .circleci/yarn-install.sh
+      - run:
+          name: run tests
+          command: ./.circleci/circleci-test.sh
+      - run:
+          name: run check scripts
+          command: ./.circleci/check.sh
+      - *store_test_results
+      - *store_artifacts
+
+  generate_docs:
+    <<: *ruby_defaults
+    steps:
+      - checkout
+      - *attach_workspace
+      - run: *set_aws_credentials
+      - run: *set_bundle_path_local
+      - run: .circleci/yarn-install.sh
+      - run: ./.circleci/gen_doc.sh
+
+  deploy_assets_to_s3:
+    <<: *ruby_defaults
+    steps:
+      - checkout
+      - *attach_workspace
+      - run: *set_aws_credentials
+      - run: *set_aws_credentials_prd
+      - run: *set_bundle_path_local
+      - run: *deploy_assets_to_s3
+      - persist_to_workspace:
+          root: ~/target
+          paths:
+            - public/assets
+            - public/packs
+
+  prepare_bundle:
+    <<: *amazonlinux_defaults
+    steps:
+      - checkout
+      - run: sudo gem update bundler
+      - *attach_workspace
+      - run: .circleci/yarn-install.sh
+      - run: *prepare_bundle
+      - persist_to_workspace:
+          root: ~/target
+          paths:
+            - .bundle
+            - vendor/development/bundle
+
+  deploy_to_s3_stg:
+    <<: *ruby_defaults
+    steps:
+      - checkout
+      - *attach_workspace
+      - run: .circleci/yarn-install.sh
+      - run: *set_aws_credentials
+      - run: *deploy_to_s3
+      - run: *slack_notifier_stg
+
+  deploy_to_s3_prd:
+    <<: *ruby_defaults
+    steps:
+      - checkout
+      - *attach_workspace
+      - run: .circleci/yarn-install.sh
+      - run: *set_aws_credentials_prd
+      - run: *deploy_to_s3
+      - run: *slack_notifier_prd
+
+  update_design:
+    <<: *ruby_defaults
+    steps:
+      - checkout
+      - run:
+          name: update design from zelda-design4.0
+          command: ./.circleci/update-design.sh
+
+workflows:
+  version: 2
+  build_and_deploy:
+    jobs:
+      - build
+      - danger:
+          context: danger
+      - gitleaks:
+          context: gitleaks
+      - code_analyze:
+          requires:
+            - build
+      - rspec_and_check:
+          requires:
+            - build
+      - generate_docs:
+          filters: *filter_only_develop
+          requires:
+            - code_analyze
+            - rspec_and_check
+      - deploy_assets_to_s3:
+          filters: *filter_only_release
+          requires:
+            - code_analyze
+            - rspec_and_check
+      - prepare_bundle:
+          requires:
+            - deploy_assets_to_s3
+      - deploy_to_s3_stg:
+          filters: *filter_only_release_stg
+          requires:
+            - prepare_bundle
+      - deploy_to_s3_prd:
+          filters: *filter_only_release_prd
+          requires:
+            - prepare_bundle
+
+  # TODO: テンプレートをコピーした後に有効化してください
+  # scheduled-workflow:
+  #   triggers:
+  #     - schedule:
+  #         cron: "0 6,23 * * *"
+  #         filters: *filter_only_develop
+  #   jobs:
+  #     - update_design:
+  #         context: hub-command

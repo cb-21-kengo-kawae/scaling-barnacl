@@ -1,0 +1,140 @@
+create_table "billing_fixeds", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4", comment: "固定費 集計結果" do |t|
+  t.string   "date",         null: false,                   comment: "日付（YYYY-MM-DD形式）"
+  t.text     "policy_ids",   null: false,                   comment: "利用可能なサービスのpolicy_id（カンマ区切り）"
+  t.datetime "created_at",   null: false
+  t.datetime "updated_at",   null: false
+  t.index ["date"], name: "billing_fixeds_references_on_date", using: :btree
+end
+
+# データマネジメント量に応じた従量課金
+create_table "billing_pay_per_data_flows", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4", comment: "データマネジメント量に応じた従量課金" do |t|
+  # TODO 必要に応じてカラムを追加
+  t.datetime "created_at",   null: false
+  t.datetime "updated_at",   null: false
+  t.index ["xxxxx"], name: "billing_pay_per_data_flows_references_on_xxxxx", using: :btree
+end
+
+# PV数に応じた従量課金
+create_table "billing_pay_per_pvs", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4", comment: "PV数に応じた従量課金" do |t|
+  # TODO 必要に応じてカラムを追加
+  t.datetime "created_at",   null: false
+  t.datetime "updated_at",   null: false
+  t.index ["xxxxx"], name: "billing_pay_per_pvs_references_on_xxxxx", using: :btree
+end
+
+# モバイルログ数に応じた従量課金
+create_table "billing_pay_per_mobile_logs", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4", comment: "モバイルログ数に応じた従量課金" do |t|
+  # TODO 必要に応じてカラムを追加
+  t.datetime "created_at",   null: false
+  t.datetime "updated_at",   null: false
+  t.index ["xxxxx"], name: "billing_pay_per_mobile_logs_references_on_xxxxx", using: :btree
+end
+
+# セグメントのデータ量に応じた従量課金
+create_table "billing_pay_per_segments", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4", comment: "セグメントのデータ量に応じた従量課金" do |t|
+  # TODO 必要に応じてカラムを追加
+  t.datetime "created_at",   null: false
+  t.datetime "updated_at",   null: false
+  t.index ["xxxxx"], name: "billing_pay_per_segments_references_on_xxxxx", using: :btree
+end
+
+# コンテンツボックスへの保存量に応じた従量課金
+create_table "billing_pay_per_contentboxs", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4", comment: "コンテンツボックスへの保存量に応じた従量課金" do |t|
+  # TODO 必要に応じてカラムを追加
+  t.datetime "created_at",   null: false
+  t.datetime "updated_at",   null: false
+  t.index ["xxxxx"], name: "billing_pay_per_contentboxs_references_on_xxxxx", using: :btree
+end
+
+# ユーザー数に応じた従量課金
+create_table "billing_pay_per_users", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4", comment: "ユーザー数に応じた従量課金" do |t|
+  # TODO 必要に応じてカラムを追加
+  t.datetime "created_at",   null: false
+  t.datetime "updated_at",   null: false
+  t.index ["xxxxx"], name: "billing_pay_per_users_references_on_xxxxx", using: :btree
+end
+
+# メール配信数に応じた従量課金
+create_table "billing_pay_per_mails", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4", comment: "メール配信数に応じた従量課金" do |t|
+  # TODO 必要に応じてカラムを追加
+  t.datetime "created_at",   null: false
+  t.datetime "updated_at",   null: false
+  t.index ["xxxxx"], name: "billing_pay_per_mails_references_on_xxxxx", using: :btree
+end
+
+# LINE配信数に応じた従量課金
+create_table "billing_pay_per_lines", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4", comment: "LINE配信数に応じた従量課金" do |t|
+  # TODO 必要に応じてカラムを追加
+  t.datetime "created_at",   null: false
+  t.datetime "updated_at",   null: false
+  t.index ["xxxxx"], name: "billing_pay_per_lines_references_on_xxxxx", using: :btree
+end
+
+# Push通知配信数に応じた従量課金
+create_table "billing_pay_per_pushs", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4", comment: "Push通知配信数に応じた従量課金" do |t|
+  # TODO 必要に応じてカラムを追加
+  t.datetime "created_at",   null: false
+  t.datetime "updated_at",   null: false
+  t.index ["xxxxx"], name: "billing_pay_per_pushs_references_on_xxxxx", using: :btree
+end
+
+# レコメンドのリクエスト数に応じた従量課金
+create_table "billing_pay_per_recommends", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4", comment: "レコメンドのリクエスト数に応じた従量課金" do |t|
+  # TODO 必要に応じてカラムを追加
+  t.datetime "created_at",   null: false
+  t.datetime "updated_at",   null: false
+  t.index ["xxxxx"], name: "billing_pay_per_recommends_references_on_xxxxx", using: :btree
+end
+
+# Web接客のリクエスト数に応じた従量課金
+create_table "billing_pay_per_clerks", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4", comment: "Web接客のリクエスト数に応じた従量課金" do |t|
+  # TODO 必要に応じてカラムを追加
+  t.datetime "created_at",   null: false
+  t.datetime "updated_at",   null: false
+  t.index ["xxxxx"], name: "billing_pay_per_clerks_references_on_xxxxx", using: :btree
+end
+
+# SMS配信数に応じた従量課金
+create_table "billing_pay_per_smss", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4", comment: "SMS配信数に応じた従量課金" do |t|
+  # TODO 必要に応じてカラムを追加
+  t.datetime "created_at",   null: false
+  t.datetime "updated_at",   null: false
+  t.index ["xxxxx"], name: "billing_pay_per_smss_references_on_xxxxx", using: :btree
+end
+
+# DMの配信数に応じた従量課金
+create_table "billing_pay_per_dms", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4", comment: "DMの配信数に応じた従量課金" do |t|
+  # TODO 必要に応じてカラムを追加
+  t.datetime "created_at",   null: false
+  t.datetime "updated_at",   null: false
+  t.index ["xxxxx"], name: "billing_pay_per_dms_references_on_xxxxx", using: :btree
+end
+
+# API接続システム数に応じた従量課金
+create_table "billing_pay_per_api_useds", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4", comment: "API接続システム数に応じた従量課金" do |t|
+  # TODO 必要に応じてカラムを追加
+  t.datetime "created_at",   null: false
+  t.datetime "updated_at",   null: false
+  t.index ["xxxxx"], name: "billing_pay_per_api_useds_references_on_xxxxx", using: :btree
+end
+
+create_table "billing_packets", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4", comment: "パケット利用量に応じた課金" do |t|
+  t.string   "hash_id",      null: false,                   comment: "パケット集計の処理を一意に特定するためのハッシュ値"
+  t.integer  "xxxxxx_id",    unsigned: true                 comment: "アプリケーションID"
+  t.integer  "xxxxxx_id",    unsigned: true                 comment: "処理ID"
+  t.datetime "started_at",   null: false                    comment: "実行開始時間"
+  t.datetime "finished_at",  null: false                    comment: "実行終了時間"
+  t.text     "query",        null: false,                   comment: "実行されたクエリ"
+  t.integer  "packet",       unsigned: true                 comment: "消費パケット数"
+  t.datetime "created_at",   null: false
+  t.datetime "updated_at",   null: false
+  t.index ["hash_id"], name: "billing_packets_references_on_hash_id", using: :btree
+end
+
+create_table "billing_packet_dailies", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4", comment: "パケット利用量に応じた課金（日次のサマリ）" do |t|
+  t.string   "date",         null: false,                   comment: "日付（YYYY-MM-DD形式）"
+  t.integer  "packet",       unsigned: true                 comment: "消費パケット数"
+  t.datetime "created_at",   null: false
+  t.datetime "updated_at",   null: false
+  t.index ["date"], name: "billing_packet_dailies_references_on_date", using: :btree
+end

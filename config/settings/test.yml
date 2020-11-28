@@ -1,0 +1,6 @@
+db:
+  host: zelda-app-db
+  port: 3306
+  database: zelda_template4th_development
+  username: root
+  password: test

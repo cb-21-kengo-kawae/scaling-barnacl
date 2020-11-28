@@ -1,0 +1,41 @@
+create_table "admin_public_keys", id: :integer, unsigned: true, force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4" do |t|
+  t.string   "kid"
+  t.string   "jwk",        limit: 1024
+  t.datetime "created_at",              null: false
+  t.datetime "updated_at",              null: false
+end
+
+create_table "db_connections", unsigned: true, force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4" do |t|
+  t.integer  "account_id",                 unsigned: true
+  t.string   "type",          null: false
+  t.string   "name"
+  t.string   "host",          null: false
+  t.integer  "port",                       unsigned: true
+  t.integer  "pool",                       unsigned: true
+  t.string   "adapter"
+  t.string   "database"
+  t.datetime "db_created_at"
+  t.datetime "created_at",    null: false
+  t.datetime "updated_at",    null: false
+  t.index ["account_id"], name: "index_db_connections_on_account_id", using: :btree
+  t.index ["type"], name: "index_db_connections_on_type", using: :btree
+  t.index ["account_id", "type"], name: "ui_db_connections", using: :btree, unique: true
+end
+
+create_table "policies", id: :integer, unsigned: true, force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4" do |t|
+  t.string   "name",       null: false
+  t.string   "name_en",    null: false
+  t.string   "identifier", null: false
+  t.string   "menu",       null: false
+  t.integer  "policy_type",null: false, default: 0
+  t.datetime "created_at", null: false
+  t.datetime "updated_at", null: false
+  t.integer  "order_by"
+end
+
+create_table "public_keys", id: :integer, unsigned: true, force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4" do |t|
+  t.string   "kid"
+  t.string   "jwk",        limit: 1024
+  t.datetime "created_at",              null: false
+  t.datetime "updated_at",              null: false
+end
